@@ -5,10 +5,5 @@ module.exports = {
     description: `Portfolio site for personal use.`,
     siteUrl: `https://kreivi.github.io`,
   },
-  plugins: [
-    `gatsby-plugin-top-layout`,
-    `gatsby-plugin-material-ui`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify-cms`,
-  ],
+  plugins: [`gatsby-plugin-top-layout`, `gatsby-plugin-material-ui`, `gatsby-plugin-react-helmet`],
 };
