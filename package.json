@@ -13,7 +13,8 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "clean": "gatsby clean",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
@@ -23,6 +24,9 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-helmet": "^6.1.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.3.2"
   },
   "repository": {
     "type": "git",
