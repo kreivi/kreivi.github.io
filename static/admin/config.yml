@@ -1,0 +1,23 @@
+backend:
+  name: github
+  branch: main
+  repo: kreivi/kreivi.github.io
+
+publish_mode: editorial_workflow
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/blog'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}.md'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Published Date', name: 'publishedDate', widget: 'datetime' }
+      - { label: 'Cover Image', name: 'coverImage', widget: 'image' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
