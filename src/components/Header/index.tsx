@@ -11,9 +11,7 @@ export type HeaderType = {
 const Header: React.FC<HeaderType> = ({ title = 'Portfolio' }) => {
   return (
     <AppBar position='static' color='default'>
-      <Toolbar>
-        <Typography variant='h2'>{title}</Typography>
-      </Toolbar>
+      <Toolbar></Toolbar>
     </AppBar>
   );
 };

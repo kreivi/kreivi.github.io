@@ -6,6 +6,12 @@ import { StaticImage } from 'gatsby-plugin-image';
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      margin: theme.spacing(1),
+    },
+    container: {
       width: 80,
       height: 80,
       [theme.breakpoints.up('md')]: {
@@ -24,18 +30,34 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const Avatar: React.FC<{}> = () => {
+  const {
+    site: {
+      siteMetadata: { author },
+    },
+  } = useStaticQuery(
+    graphql`
+      query {
+        site {
+          siteMetadata {
+            author
+          }
+        }
+      }
+    `
+  );
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <StaticImage
-        className={classes.image}
-        src='../../assets/images/avatar_artistic.png'
-        alt='Severi Vidnäs'
-        placeholder='blurred'
-      />
+      <div className={classes.container}>
+        <StaticImage
+          className={classes.image}
+          src='../../assets/images/avatar_artistic.png'
+          alt={author}
+          placeholder='blurred'
+        />
+      </div>
     </div>
   );
-  //return
 };
 
 export default Avatar;
