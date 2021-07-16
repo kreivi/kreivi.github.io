@@ -6,7 +6,7 @@ import Social from '../Social';
 
 const Contact: React.FC<{}> = () => {
   return (
-    <div>
+    <div id='contact'>
       <Avatar />
       <Typography variant='h4' component='h1' align='center'>
         VIDNÄS SEVERI

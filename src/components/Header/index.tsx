@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Link, Toolbar, Typography } from '@material-ui/core';
 
 export type HeaderType = {
   title?: string;
@@ -11,7 +11,11 @@ export type HeaderType = {
 const Header: React.FC<HeaderType> = ({ title = 'Portfolio' }) => {
   return (
     <AppBar position='static' color='default'>
-      <Toolbar></Toolbar>
+      <Toolbar>
+        <Link color='textPrimary' variant='h6' component='h2' href='#contact'>
+          Info
+        </Link>
+      </Toolbar>
     </AppBar>
   );
 };

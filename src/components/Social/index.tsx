@@ -6,6 +6,7 @@ import GitHub from './github';
 import Twitter from './twitter';
 import Twitch from './twitch';
 import Itch from './itch';
+import YouTube from './youtube';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -23,10 +24,11 @@ const Social: React.FC<{}> = () => {
   return (
     <div className={classes.root}>
       <LinkedIn />
-      <GitHub />
       <Twitter />
-      <Twitch />
+      <GitHub />
       <Itch />
+      <YouTube />
+      <Twitch />
     </div>
   );
 };
