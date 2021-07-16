@@ -3,6 +3,7 @@ import { Typography } from '@material-ui/core';
 
 import Avatar from '../Avatar';
 import Social from '../Social';
+import About from '../About';
 
 const Contact: React.FC<{}> = () => {
   return (
@@ -15,6 +16,7 @@ const Contact: React.FC<{}> = () => {
         SOFTWARE DEVELOPER
       </Typography>
       <Social />
+      <About />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import { AppBar } from '@material-ui/core';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 
 import Copyright from '../Copyright';
+import Social from '../Social';
 
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
@@ -18,6 +19,7 @@ const Footer: React.FC<{}> = () => {
   const classes = useStyles();
   return (
     <AppBar position='relative' color='default' className={classes.footer} component='footer'>
+      <Social />
       <Copyright />
     </AppBar>
   );
