@@ -26,7 +26,9 @@ const Layout: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   return (
     <div className={classes.root}>
       <Header />
-      <Container className={classes.contentArea}>{children}</Container>
+      <Container className={classes.contentArea} component='main'>
+        {children}
+      </Container>
       <Footer />
     </div>
   );
