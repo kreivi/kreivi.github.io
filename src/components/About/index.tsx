@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Typography, makeStyles, createStyles, Theme, ThemeProvider } from '@material-ui/core';
+import { Paper, Typography, makeStyles, createStyles, Theme, ThemeProvider, List, ListItem, ListItemText, ListSubheader, Chip } from '@material-ui/core';
 
 import theme from './theme';
 
@@ -13,6 +13,62 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+export type SimpleListItemType = {
+  key: string;
+  primary: string;
+}
+
+const experiences: Array<SimpleListItemType> = [
+  {
+    key: 'experience-01',
+    primary: '+10 years of professional experience in software development',
+  },
+  {
+    key: 'experience-02',
+    primary: '+5 years of experience in game development'
+  },
+];
+const programmingLanguages: Array<SimpleListItemType> = [
+  {
+    key: 'programming-language-01',
+    primary: 'JavaScript/TypeScript',
+  },
+  {
+    key: 'programming-language-02',
+    primary: 'C++',
+  },
+  {
+    key: 'programming-language-03',
+    primary: 'GDScript',
+  },
+  {
+    key: 'programming-language-04',
+    primary: 'Java',
+  },
+  {
+    key: 'programming-language-05',
+    primary: 'LuaScript',
+  },
+  {
+    key: 'programming-language-06',
+    primary: 'C#',
+  },
+];
+const gameEngines: Array<SimpleListItemType> = [
+  {
+    key: 'game-engine-01',
+    primary: 'Unreal Engine',
+  },
+  {
+    key: 'game-engine-02',
+    primary: 'Godot Engine',
+  },
+  {
+    key: 'game-engine-03',
+    primary: 'Unity',
+  },
+]
+
 const About: React.FC<{}> = () => {
   const classes = useStyles();
   return (
@@ -22,34 +78,30 @@ const About: React.FC<{}> = () => {
           About
         </Typography>
         <Typography align='justify'>
-          I'm Software Developer with broad experience of different languages and software development methodologies.
+          I'm Software Developer with broad experience of different programming languages and software development methodologies.
         </Typography>
         <Typography>
           Personal interests in the field are very game focused and I love to spend my free time developing as much as
           playing games.
         </Typography>
-        <Typography variant='h3' align='center'>
+        <Typography variant="h2" align="center">
           Experience
         </Typography>
-        <ul>
-          <Typography component='li'>+10 years of professional software development</Typography>
-          <Typography component='li'>+5 years of game development</Typography>
-          <Typography component='li'>PROGRAMMING LANGUAGES:</Typography>
-          <ul>
-            <Typography component='li'>JavaScript/TypeScript</Typography>
-            <Typography component='li'>C++</Typography>
-            <Typography component='li'>GDScript</Typography>
-            <Typography component='li'>Java</Typography>
-            <Typography component='li'>LuaScript</Typography>
-            <Typography component='li'>C#</Typography>
-          </ul>
-          <Typography component='li'>GAME ENGINES:</Typography>
-          <ul>
-            <Typography component='li'>Unreal Engine</Typography>
-            <Typography component='li'>Godot Engine</Typography>
-            <Typography component='li'>Unity</Typography>
-          </ul>
-        </ul>
+        <List>
+          {experiences.map(item => (
+            <ListItem key={item.key} disableGutters>
+              <ListItemText primary={item.primary} />
+            </ListItem>
+          ))}
+          <ListSubheader>Programming languages:</ListSubheader>
+          {programmingLanguages.map(item => (
+            <Chip key={item.key} label={item.primary} />
+          ))}
+          <ListSubheader>Game engines:</ListSubheader>
+          {gameEngines.map(item => (
+            <Chip key={item.key} label={item.primary} />
+          ))}
+        </List>
       </Paper>
     </ThemeProvider>
   );
