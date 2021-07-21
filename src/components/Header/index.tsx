@@ -1,5 +1,5 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import React from "react";
+import { AppBar, Link, Toolbar, Typography } from "@material-ui/core";
 
 export type HeaderType = {
   title?: string;
@@ -8,11 +8,13 @@ export type HeaderType = {
 /**
  * Site wide Header.
  */
-const Header: React.FC<HeaderType> = ({ title = 'Portfolio' }) => {
+const Header: React.FC<HeaderType> = ({ title = "Portfolio" }) => {
   return (
-    <AppBar position='static' color='default'>
+    <AppBar position="static" color="default">
       <Toolbar>
-        <Typography variant='h2'>{title}</Typography>
+        <Link color="textPrimary" variant="h6" component="h3" href="#contact">
+          Info
+        </Link>
       </Toolbar>
     </AppBar>
   );

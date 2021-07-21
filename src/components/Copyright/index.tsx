@@ -1,6 +1,6 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Typography } from '@material-ui/core';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Typography } from "@material-ui/core";
 
 /**
  * Copyright text. Automatically gets current year and author name
@@ -26,7 +26,7 @@ const Copyright: React.FC<{}> = () => {
     `
   );
   return (
-    <Typography color='textSecondary'>
+    <Typography color="textSecondary">
       &copy;&nbsp;{new Date().getUTCFullYear()}&nbsp;{author}
     </Typography>
   );
