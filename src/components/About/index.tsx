@@ -22,9 +22,6 @@ const useStyles = makeStyles((theme: Theme) =>
       marginBottom: theme.spacing(2),
       padding: theme.spacing(2),
     },
-    chip: {
-      marginRight: theme.spacing(0.5),
-    },
   })
 );
 
@@ -40,6 +37,10 @@ const experiences: Array<SimpleListItemType> = [
   },
   {
     key: "experience-02",
+    primary: "+5 years of professional experience in cloud applications",
+  },
+  {
+    key: "experience-03",
     primary: "+5 years of experience in game development",
   },
 ];
@@ -89,18 +90,23 @@ const About: React.FC<{}> = () => {
   return (
     <ThemeProvider theme={theme}>
       <Paper className={classes.root}>
-        <Typography variant="h2" align="center">
+        <Typography variant="h2" align="center" gutterBottom>
           About
         </Typography>
-        <Typography align="justify">
-          I'm Software Developer with broad experience of different programming
-          languages and software development methodologies.
+        <Typography gutterBottom>
+          I'm a Software Developer with broad experience of different
+          programming languages and software development methodologies. While my
+          professional career has mostly been business application oriented my
+          personal interests in the field have always been game industry
+          focused. I love spending my free time developing as much as playing
+          games.
         </Typography>
-        <Typography>
-          Personal interests in the field are very game focused and I love to
-          spend my free time developing as much as playing games.
+        <Typography gutterBottom>
+          I'm a team player capable of doing compromises for common goal but at
+          the same time am not afraid to stand my ground. I like my code clean
+          and automatically tested so I strive to keep code quality high.
         </Typography>
-        <Typography variant="h2" align="center">
+        <Typography variant="h2" align="center" gutterBottom>
           Experience
         </Typography>
         <List>
@@ -111,19 +117,11 @@ const About: React.FC<{}> = () => {
           ))}
           <ListSubheader>Programming languages:</ListSubheader>
           {programmingLanguages.map((item) => (
-            <Chip
-              className={classes.chip}
-              key={item.key}
-              label={item.primary}
-            />
+            <Chip key={item.key} label={item.primary} />
           ))}
           <ListSubheader>Game engines:</ListSubheader>
           {gameEngines.map((item) => (
-            <Chip
-              className={classes.chip}
-              key={item.key}
-              label={item.primary}
-            />
+            <Chip key={item.key} label={item.primary} />
           ))}
         </List>
       </Paper>
