@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
       padding: theme.spacing(2),
     },
     chip: {
-      marginRight: theme.spacing(1),
+      marginRight: theme.spacing(0.5),
     },
   })
 );

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Tooltip } from '@material-ui/core';
-import { Linkedin as Icon } from 'mdi-material-ui';
+import React from "react";
+import { Tooltip } from "@material-ui/core";
+import { Linkedin as Icon } from "mdi-material-ui";
 
-import LinkIconButton from '../LinkIconButton';
+import LinkIconButton from "../LinkIconButton";
 
 /**
  * LinkedIn specific LinkIconButton.
@@ -10,8 +10,12 @@ import LinkIconButton from '../LinkIconButton';
  */
 const LinkedInLinkButton: React.FC<{}> = () => {
   return (
-    <LinkIconButton href='https://www.linkedin.com/in/severi-vidnas/' aria-label='LinkedIn' size='small'>
-      <Tooltip title='LinkedIn'>
+    <LinkIconButton
+      href="https://www.linkedin.com/in/severi-vidnas/"
+      aria-label="LinkedIn"
+      size="small"
+    >
+      <Tooltip title="LinkedIn">
         <Icon />
       </Tooltip>
     </LinkIconButton>

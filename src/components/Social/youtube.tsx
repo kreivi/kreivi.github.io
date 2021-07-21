@@ -1,8 +1,8 @@
-import React from 'react';
-import { Tooltip } from '@material-ui/core';
-import { Youtube as Icon } from 'mdi-material-ui';
+import React from "react";
+import { Tooltip } from "@material-ui/core";
+import { Youtube as Icon } from "mdi-material-ui";
 
-import LinkIconButton from '../LinkIconButton';
+import LinkIconButton from "../LinkIconButton";
 
 /**
  * YouTube specific LinkIconButton.
@@ -10,8 +10,12 @@ import LinkIconButton from '../LinkIconButton';
  */
 const YouTubeLinkButton: React.FC<{}> = () => {
   return (
-    <LinkIconButton href='https://www.youtube.com/channel/UCnBgkNXb-9QKU7a4xyc4pHw' aria-label='YouTube' size='small'>
-      <Tooltip title='YouTube'>
+    <LinkIconButton
+      href="https://www.youtube.com/channel/UCnBgkNXb-9QKU7a4xyc4pHw"
+      aria-label="YouTube"
+      size="small"
+    >
+      <Tooltip title="YouTube">
         <Icon />
       </Tooltip>
     </LinkIconButton>

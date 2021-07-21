@@ -1,10 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import {
-  makeStyles,
-  createStyles,
-  Theme,
-} from "@material-ui/core";
+import { makeStyles, createStyles, Theme } from "@material-ui/core";
 import { StaticImage } from "gatsby-plugin-image";
 
 const useStyles = makeStyles((theme: Theme) =>

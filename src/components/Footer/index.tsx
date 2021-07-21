@@ -1,16 +1,16 @@
-import React from 'react';
-import { AppBar } from '@material-ui/core';
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import React from "react";
+import { AppBar } from "@material-ui/core";
+import { makeStyles, Theme } from "@material-ui/core/styles";
 
-import Copyright from '../Copyright';
-import Social from '../Social';
+import Copyright from "../Copyright";
+import Social from "../Social";
 
 const useStyles = makeStyles((theme: Theme) => ({
   footer: {
-    display: 'flex',
-    width: '100%',
-    flexDirection: 'column',
-    marginTop: 'auto',
+    display: "flex",
+    width: "100%",
+    flexDirection: "column",
+    marginTop: "auto",
     padding: theme.spacing(1),
   },
 }));
@@ -18,7 +18,12 @@ const useStyles = makeStyles((theme: Theme) => ({
 const Footer: React.FC<{}> = () => {
   const classes = useStyles();
   return (
-    <AppBar position='relative' color='default' className={classes.footer} component='footer'>
+    <AppBar
+      position="relative"
+      color="default"
+      className={classes.footer}
+      component="footer"
+    >
       <Social />
       <Copyright />
     </AppBar>

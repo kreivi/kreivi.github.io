@@ -1,8 +1,8 @@
-import React from 'react';
-import { Tooltip } from '@material-ui/core';
-import { Twitter as Icon } from 'mdi-material-ui';
+import React from "react";
+import { Tooltip } from "@material-ui/core";
+import { Twitter as Icon } from "mdi-material-ui";
 
-import LinkIconButton from '../LinkIconButton';
+import LinkIconButton from "../LinkIconButton";
 
 /**
  * Twitter specific LinkIconButton.
@@ -10,8 +10,12 @@ import LinkIconButton from '../LinkIconButton';
  */
 const TwitterLinkButton: React.FC<{}> = () => {
   return (
-    <LinkIconButton href='https://twitter.com/kreivi_krapula' aria-label='Twitter' size='small'>
-      <Tooltip title='Twitter'>
+    <LinkIconButton
+      href="https://twitter.com/kreivi_krapula"
+      aria-label="Twitter"
+      size="small"
+    >
+      <Tooltip title="Twitter">
         <Icon />
       </Tooltip>
     </LinkIconButton>

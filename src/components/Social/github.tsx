@@ -1,8 +1,8 @@
-import React from 'react';
-import { Tooltip } from '@material-ui/core';
-import { Github as Icon } from 'mdi-material-ui';
+import React from "react";
+import { Tooltip } from "@material-ui/core";
+import { Github as Icon } from "mdi-material-ui";
 
-import LinkIconButton from '../LinkIconButton';
+import LinkIconButton from "../LinkIconButton";
 
 /**
  * GitHub specific LinkIconButton.
@@ -10,8 +10,12 @@ import LinkIconButton from '../LinkIconButton';
  */
 const GitHubLinkButton: React.FC<{}> = () => {
   return (
-    <LinkIconButton href='https://github.com/kreivi' aria-label='GitHub' size='small'>
-      <Tooltip title='GitHub'>
+    <LinkIconButton
+      href="https://github.com/kreivi"
+      aria-label="GitHub"
+      size="small"
+    >
+      <Tooltip title="GitHub">
         <Icon />
       </Tooltip>
     </LinkIconButton>
