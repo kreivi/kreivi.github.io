@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+/**
+ * Contact element will display basic contact information.
+ * @returns Contact element.
+ */
 const Contact: React.FC<{}> = () => {
   const classes = useStyles();
   return (

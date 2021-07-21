@@ -4,7 +4,11 @@ import { Twitter as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';
 
-const GitHubLinkButton: React.FC<{}> = () => {
+/**
+ * Twitter specific LinkIconButton.
+ * @returns Twitter LinkIconButton.
+ */
+const TwitterLinkButton: React.FC<{}> = () => {
   return (
     <LinkIconButton href='https://twitter.com/kreivi_krapula' aria-label='Twitter' size='small'>
       <Tooltip title='Twitter'>
@@ -14,4 +18,4 @@ const GitHubLinkButton: React.FC<{}> = () => {
   );
 };
 
-export default GitHubLinkButton;
+export default TwitterLinkButton;

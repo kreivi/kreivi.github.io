@@ -4,7 +4,11 @@ import { Twitch as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';
 
-const GitHubLinkButton: React.FC<{}> = () => {
+/**
+ * Twitch specific LinkIconButton.
+ * @returns Twitch LinkIconButton.
+ */
+const TwitchLinkButton: React.FC<{}> = () => {
   return (
     <LinkIconButton href='https://www.twitch.tv/kreivi_krapula' aria-label='Twitch' size='small'>
       <Tooltip title='Twitch'>
@@ -14,4 +18,4 @@ const GitHubLinkButton: React.FC<{}> = () => {
   );
 };
 
-export default GitHubLinkButton;
+export default TwitchLinkButton;

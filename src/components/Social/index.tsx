@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+/**
+ * Collection of social link elements.
+ * @returns Social element.
+ */
 const Social: React.FC<{}> = () => {
   const classes = useStyles();
 

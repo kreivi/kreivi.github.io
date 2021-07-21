@@ -4,7 +4,11 @@ import { Linkedin as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';
 
-const GitHubLinkButton: React.FC<{}> = () => {
+/**
+ * LinkedIn specific LinkIconButton.
+ * @returns LinkedIn LinkIconButton.
+ */
+const LinkedInLinkButton: React.FC<{}> = () => {
   return (
     <LinkIconButton href='https://www.linkedin.com/in/severi-vidnas/' aria-label='LinkedIn' size='small'>
       <Tooltip title='LinkedIn'>
@@ -14,4 +18,4 @@ const GitHubLinkButton: React.FC<{}> = () => {
   );
 };
 
-export default GitHubLinkButton;
+export default LinkedInLinkButton;

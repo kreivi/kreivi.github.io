@@ -4,7 +4,11 @@ import { LinkBoxOutline as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';
 
-const GitHubLinkButton: React.FC<{}> = () => {
+/**
+ * Itch specific LinkIconButton.
+ * @returns Itch LinkIconButton.
+ */
+const ItchLinkButton: React.FC<{}> = () => {
   return (
     <LinkIconButton href='https://kreivi.itch.io/' aria-label='Itch.io' size='small'>
       <Tooltip title='Itch.io'>
@@ -14,4 +18,4 @@ const GitHubLinkButton: React.FC<{}> = () => {
   );
 };
 
-export default GitHubLinkButton;
+export default ItchLinkButton;
