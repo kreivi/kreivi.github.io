@@ -12,12 +12,25 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
+        name: `image`,
         path: `${__dirname}/static/assets/images`,
       },
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `game`,
+        path: `${__dirname}/content/game`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+      },
+    },
   ],
 };
