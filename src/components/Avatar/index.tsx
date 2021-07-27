@@ -1,30 +1,30 @@
-import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
-import { makeStyles, createStyles, Theme } from "@material-ui/core";
-import { StaticImage } from "gatsby-plugin-image";
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import { makeStyles, createStyles, Theme } from '@material-ui/core';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
       margin: theme.spacing(1),
     },
     container: {
       width: 80,
       height: 80,
-      [theme.breakpoints.up("md")]: {
+      [theme.breakpoints.up('md')]: {
         width: 100,
         height: 100,
       },
-      [theme.breakpoints.up("lg")]: {
+      [theme.breakpoints.up('lg')]: {
         width: 120,
         height: 120,
       },
     },
     image: {
-      borderRadius: "50%",
+      borderRadius: '50%',
     },
   })
 );
@@ -55,9 +55,9 @@ const Avatar: React.FC<{}> = () => {
       <div className={classes.container}>
         <StaticImage
           className={classes.image}
-          src="../../assets/images/avatar_artistic.png"
+          src='../../static/assets/images/avatar_artistic.png'
           alt={author}
-          placeholder="blurred"
+          placeholder='blurred'
         />
       </div>
     </div>

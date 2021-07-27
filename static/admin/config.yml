@@ -1,0 +1,30 @@
+backend:
+  name: github
+  branch: main
+  repo: kreivi/kreivi.github.io
+
+media_folder: static/assets/images
+public_folder: assets/images
+publish_mode: editorial_workflow
+
+collections:
+  - name: game
+    label: Game
+    folder: content/game
+    create: true
+    slug: '{{slug}}.md'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string', description: 'Titular name of the game' }
+      - {
+          label: 'Short Description',
+          name: 'shortDescription',
+          widget: 'string',
+          description: 'Short description of game',
+        }
+      - {
+          label: 'Creation date',
+          name: 'creationDate',
+          widget: 'datetime',
+          description: 'When was the game (approximately created',
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown', description: 'Rich body text of the game' }
