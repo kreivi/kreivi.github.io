@@ -55,7 +55,7 @@ const Avatar: React.FC<{}> = () => {
       <div className={classes.container}>
         <StaticImage
           className={classes.image}
-          src='../../static/assets/images/avatar_artistic.png'
+          src='../../../static/assets/images/avatar_artistic.png'
           alt={author}
           placeholder='blurred'
         />
