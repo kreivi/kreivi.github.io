@@ -1,10 +1,13 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import { useStaticQuery, graphql } from "gatsby";
-import { useLocation } from "@reach/router";
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import { useStaticQuery, graphql } from 'gatsby';
+import { useLocation } from '@reach/router';
 
-import formMetaTags from "./formMetaTags";
+import formMetaTags from './formMetaTags';
 
+/**
+ * SEO properties.
+ */
 export type SEOType = {
   title?: string;
   author?: string;
@@ -13,6 +16,8 @@ export type SEOType = {
 
 /**
  * SEO component for meaningful SEO tags. Fallbacks to use values from configuration if no props are passed.
+ * @param props component properties
+ * @returns SEO element
  */
 const SEO: React.FC<SEOType> = ({ author, title, description }: SEOType) => {
   const {
@@ -32,20 +37,13 @@ const SEO: React.FC<SEOType> = ({ author, title, description }: SEOType) => {
     `
   );
   const { pathname } = useLocation();
-  const seoTitle = title
-    ? `${title} | ${siteMetadata.title}`
-    : siteMetadata.title;
+  const seoTitle = title ? `${title} | ${siteMetadata.title}` : siteMetadata.title;
   const seoDescription = description || siteMetadata.description;
   const seoCanonical = `${siteMetadata.siteUrl}${pathname}`;
   const metaTags = formMetaTags(seoTitle, seoDescription, seoCanonical);
   return (
-    <Helmet
-      defer={false}
-      defaultTitle={siteMetadata.title}
-      title={seoTitle}
-      meta={metaTags}
-    >
-      <link rel="canonical" href={seoCanonical} />
+    <Helmet defer={false} defaultTitle={siteMetadata.title} title={seoTitle} meta={metaTags}>
+      <link rel='canonical' href={seoCanonical} />
     </Helmet>
   );
 };

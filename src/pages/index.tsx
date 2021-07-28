@@ -7,7 +7,16 @@ import SEO from '../components/SEO';
 import Contact from '../components/Contact';
 import Games from '../components/Games';
 
-const IndexPage: React.FC<PageProps<{}>> = () => {
+/**
+ * Index page properties.
+ */
+type IndexPageProps = PageProps<{}>;
+
+/**
+ * Domain index page.
+ * @returns page element
+ */
+const IndexPage: React.FC<IndexPageProps> = () => {
   return (
     <Layout>
       <SEO />
