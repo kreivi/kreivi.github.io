@@ -1,17 +1,49 @@
 import React from 'react';
-import { AppBar, Link, Toolbar, Typography } from '@material-ui/core';
+import { Link } from 'gatsby';
+import { makeStyles, createStyles, Theme, AppBar, Link as MuiLink, Toolbar } from '@material-ui/core';
 
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    link: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+    },
+  })
+);
+
+const navLinks = [
+  {
+    key: 'home',
+    to: '/',
+    label: 'Home',
+  },
+  {
+    key: 'contact',
+    to: '/#contact',
+    label: 'Info',
+  },
+];
 /**
  * Site wide header component
  * @returns header element
  */
 const Header: React.FC<{}> = () => {
+  const classes = useStyles();
   return (
     <AppBar position='static' color='default'>
-      <Toolbar>
-        <Link color='textPrimary' variant='h6' component='h3' href='#contact'>
-          Info
-        </Link>
+      <Toolbar component='nav'>
+        {navLinks.map((link) => (
+          <MuiLink
+            key={link.key}
+            className={classes.link}
+            component={Link}
+            color='textPrimary'
+            variant='h6'
+            to={link.to}
+          >
+            {link.label}
+          </MuiLink>
+        ))}
       </Toolbar>
     </AppBar>
   );
