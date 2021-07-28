@@ -25,6 +25,13 @@ collections:
           label: 'Creation date',
           name: 'creationDate',
           widget: 'datetime',
-          description: 'When was the game (approximately created',
+          description: 'When was the game (approximately) created',
         }
       - { label: 'Body', name: 'body', widget: 'markdown', description: 'Rich body text of the game' }
+      - {
+          label: 'Screenshots',
+          name: 'screenshots',
+          widget: 'list',
+          summary: '{{fields.image}}',
+          field: { label: 'Image', name: 'Image', widget: 'image' },
+        }
