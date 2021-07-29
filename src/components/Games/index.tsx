@@ -13,6 +13,10 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+/**
+ * Lists games found under from `content/game`.
+ * @returns games element
+ */
 const Games: React.FC<{}> = () => {
   const classes = useStyles();
   // TODO: This needs to be refined once there is some other markdown content than games
@@ -33,12 +37,11 @@ const Games: React.FC<{}> = () => {
       }
     }
   `);
-  console.log(nodes);
+
   return (
     <Paper className={classes.root} component='section'>
       <List>
         {nodes.map((game) => {
-          console.log(game);
           return (
             <ListItem key={game.id}>
               <Game {...game.frontmatter}>{game.body}</Game>

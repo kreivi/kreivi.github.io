@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'gatsby';
 import { makeStyles, createStyles, Theme, AppBar, Link as MuiLink, Toolbar } from '@material-ui/core';
 
+import { navigation } from './navigation';
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     link: {
@@ -11,18 +13,6 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const navLinks = [
-  {
-    key: 'home',
-    to: '/',
-    label: 'Home',
-  },
-  {
-    key: 'contact',
-    to: '/#contact',
-    label: 'Info',
-  },
-];
 /**
  * Site wide header component
  * @returns header element
@@ -32,7 +22,7 @@ const Header: React.FC<{}> = () => {
   return (
     <AppBar position='static' color='default'>
       <Toolbar component='nav'>
-        {navLinks.map((link) => (
+        {navigation.map((link) => (
           <MuiLink
             key={link.key}
             className={classes.link}

@@ -12,14 +12,22 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export type GameType = {
+/**
+ * Game properties.
+ */
+export type GameProps = {
   title?: string;
   creationDate?: string;
   shortDescription?: string;
   children?: string;
 };
 
-const Game: React.FC<GameType> = ({ title, creationDate, shortDescription, children }) => {
+/**
+ * Renders single game showcase.
+ * @param props game properties
+ * @returns game element
+ */
+const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, children }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
