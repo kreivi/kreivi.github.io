@@ -1,20 +1,39 @@
-import React from "react";
-import { AppBar, Link, Toolbar, Typography } from "@material-ui/core";
+import React from 'react';
+import { Link } from 'gatsby';
+import { makeStyles, createStyles, Theme, AppBar, Link as MuiLink, Toolbar } from '@material-ui/core';
 
-export type HeaderType = {
-  title?: string;
-};
+import { navigation } from './navigation';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    link: {
+      marginLeft: theme.spacing(1),
+      marginRight: theme.spacing(1),
+    },
+  })
+);
 
 /**
- * Site wide Header.
+ * Site wide header component
+ * @returns header element
  */
-const Header: React.FC<HeaderType> = ({ title = "Portfolio" }) => {
+const Header: React.FC<{}> = () => {
+  const classes = useStyles();
   return (
-    <AppBar position="static" color="default">
-      <Toolbar>
-        <Link color="textPrimary" variant="h6" component="h3" href="#contact">
-          Info
-        </Link>
+    <AppBar position='static' color='default'>
+      <Toolbar component='nav'>
+        {navigation.map((link) => (
+          <MuiLink
+            key={link.key}
+            className={classes.link}
+            component={Link}
+            color='textPrimary'
+            variant='h6'
+            to={link.to}
+          >
+            {link.label}
+          </MuiLink>
+        ))}
       </Toolbar>
     </AppBar>
   );

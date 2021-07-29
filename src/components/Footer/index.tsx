@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
 }));
 
+/**
+ * Site wide footer component
+ * @returns footer element
+ */
 const Footer: React.FC<{}> = () => {
   const classes = useStyles();
   return (
