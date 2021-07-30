@@ -1,16 +1,15 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
 import { Typography, Link, Divider, List, ListItem, Table, TableRow, TableCell } from '@material-ui/core';
-import { StaticImage } from 'gatsby-plugin-image';
 
 const components = {
-  p: (props) => <Typography {...props} />,
-  h1: (props) => <Typography varianth='h1' {...props} />,
-  h2: (props) => <Typography varianth='h2' {...props} />,
-  h3: (props) => <Typography varianth='h3' {...props} />,
-  h4: (props) => <Typography varianth='h4' {...props} />,
-  h5: (props) => <Typography varianth='h5' {...props} />,
-  h6: (props) => <Typography varianth='h6' {...props} />,
+  p: (props) => <Typography gutterBottom align='justify' {...props} />,
+  h1: (props) => <Typography variant='h1' gutterBottom {...props} />,
+  h2: (props) => <Typography variant='h2' gutterBottom {...props} />,
+  h3: (props) => <Typography variant='h3' gutterBottom {...props} />,
+  h4: (props) => <Typography variant='h4' gutterBottom {...props} />,
+  h5: (props) => <Typography variant='h5' gutterBottom {...props} />,
+  h6: (props) => <Typography variant='h6' gutterBottom {...props} />,
   thematicBreak: (props) => <Divider {...props} />,
   blockquote: (props) => <Typography variant='body2' component='blockquote' {...props} />,
   ul: (props) => <List {...props} />,
