@@ -14,4 +14,8 @@ It's using [Godot Engine](https://godotengine.org/) and it was the first game I 
 
 You can play it at [Itch](https://kreivi.itch.io/kuumela) and the source code is available at [GitHub](https://github.com/kreivi/Kuumela).
 
-You can also checkout some screenshots and gameplay video right here.
+You can also checkout some gameplay video and screenshots right here.
+
+<iframe id="ytplayer" type="text/html" width="640" height="360"
+src="https://www.youtube.com/embed/vrZI9zEzo1c?disablekb=1&fs=0&modestbranding=1&iv_load_policy=3"
+frameborder="0" allowfullscreen>
