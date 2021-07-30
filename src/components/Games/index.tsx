@@ -32,6 +32,7 @@ const Games: React.FC<{}> = () => {
             creationDate(formatString: "Do MMM YYYY")
             shortDescription
             title
+            screenshots
           }
         }
       }
@@ -44,7 +45,7 @@ const Games: React.FC<{}> = () => {
         {nodes.map((game) => {
           return (
             <ListItem key={game.id}>
-              <Game {...game.frontmatter}>{game.body}</Game>
+              <Game {...game?.frontmatter}>{game?.body}</Game>
             </ListItem>
           );
         })}
