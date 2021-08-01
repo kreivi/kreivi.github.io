@@ -57,11 +57,11 @@ const About: React.FC<{}> = () => {
               <ListItemText primary={item.primary} />
             </ListItem>
           ))}
-          <ListSubheader>Programming languages:</ListSubheader>
+          <ListSubheader disableSticky>Programming languages:</ListSubheader>
           {programmingLanguages.map((item) => (
             <Chip key={item.key} label={item.primary} />
           ))}
-          <ListSubheader>Game engines:</ListSubheader>
+          <ListSubheader disableSticky>Game engines:</ListSubheader>
           {gameEngines.map((item) => (
             <Chip key={item.key} label={item.primary} />
           ))}
