@@ -1,9 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { makeStyles, createStyles, Theme, Paper, List, ListItem } from '@material-ui/core';
+import { makeStyles, createStyles, Theme, Paper, List, ListItem, ThemeProvider } from '@material-ui/core';
 import { MDXProvider } from '@mdx-js/react';
 
 import Game from '../Game';
+import theme from './theme';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -42,13 +43,15 @@ const Games: React.FC<{}> = () => {
   return (
     <Paper className={classes.root} component='section'>
       <List>
-        {nodes.map((game) => {
-          return (
-            <ListItem key={game.id}>
-              <Game {...game?.frontmatter}>{game?.body}</Game>
-            </ListItem>
-          );
-        })}
+        <ThemeProvider theme={theme}>
+          {nodes.map((game, index) => {
+            return (
+              <ListItem key={game.id}>
+                <Game {...game?.frontmatter}>{game?.body}</Game>
+              </ListItem>
+            );
+          })}
+        </ThemeProvider>
       </List>
     </Paper>
   );

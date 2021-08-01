@@ -1,7 +1,6 @@
 import React from 'react';
-import { makeStyles, createStyles, Theme, Typography, ImageList, ImageListItem } from '@material-ui/core';
+import { makeStyles, createStyles, Theme, Typography, ImageList, ImageListItem, Paper, Box } from '@material-ui/core';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import { StaticImage, GatsbyImage } from 'gatsby-plugin-image';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -9,6 +8,7 @@ const useStyles = makeStyles((theme: Theme) =>
       width: '100%',
       display: 'flex',
       flexDirection: 'column',
+      padding: theme.spacing(2),
     },
     imageList: {
       flexWrap: 'nowrap',
@@ -17,6 +17,22 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     img: {
       objectFit: 'contain',
+    },
+    margin: {
+      margin: theme.spacing(1),
+    },
+    createdAtContainer: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'center',
+      marginBottom: theme.spacing(1),
+    },
+    createdAtCaption: {
+      marginRight: theme.spacing(0.25),
+    },
+    createdAtValue: {
+      marginLeft: theme.spacing(0.25),
     },
   })
 );
@@ -40,13 +56,23 @@ export type GameProps = {
 const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, screenshots, children }) => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
+    <Paper className={classes.root}>
       <Typography variant='h3' align='center'>
         {title}
       </Typography>
-      <Typography variant='body2'>{creationDate}</Typography>
-      <Typography>{shortDescription}</Typography>
+      <Typography variant='body2' align='center'>
+        {shortDescription}
+      </Typography>
+      <Box className={classes.createdAtContainer} component='span'>
+        <Typography className={classes.createdAtCaption} variant='caption'>
+          Created at:
+        </Typography>
+        <Typography className={classes.createdAtValue} variant='caption'>
+          {creationDate}
+        </Typography>
+      </Box>
       <MDXRenderer frontmatter={{ title, creationDate, shortDescription, screenshots }}>{children}</MDXRenderer>
+      <div className={classes.margin} />
       <ImageList className={classes.imageList} rowHeight={300}>
         {screenshots.map((screenshot, index) => (
           <ImageListItem key={index}>
@@ -54,7 +80,7 @@ const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, scre
           </ImageListItem>
         ))}
       </ImageList>
-    </div>
+    </Paper>
   );
 };
 
