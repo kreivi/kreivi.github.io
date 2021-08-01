@@ -26,10 +26,12 @@ module.exports = {
         path: `${__dirname}/content/game`,
       },
     },
+    `gatsby-plugin-mdx-embed`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
+        gatsbyRemarkPlugins: [`gatsby-plugin-mdx-embed`],
       },
     },
     `gatsby-plugin-mui-mdx-provider`,
