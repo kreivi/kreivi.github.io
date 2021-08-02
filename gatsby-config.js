@@ -31,7 +31,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.mdx`, `.md`],
-        gatsbyRemarkPlugins: [`gatsby-plugin-mdx-embed`],
+        gatsbyRemarkPlugins: [`gatsby-plugin-mdx-embed`, `gatsby-remark-responsive-iframe`],
       },
     },
     `gatsby-plugin-mui-mdx-provider`,
