@@ -20,9 +20,6 @@ const IndexPage: React.FC<IndexPageProps> = () => {
   return (
     <Layout>
       <SEO />
-      <Typography variant='subtitle1' component='h6' color='error' align='center'>
-        Work in progress
-      </Typography>
       <Contact />
       <Games />
     </Layout>
