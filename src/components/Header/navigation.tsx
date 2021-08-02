@@ -12,4 +12,9 @@ export const navigation = [
     to: '/#contact',
     label: 'Info',
   },
+  {
+    key: 'showcase',
+    to: '/#showcase',
+    label: 'Showcase',
+  },
 ];
