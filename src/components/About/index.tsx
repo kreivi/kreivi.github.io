@@ -21,7 +21,10 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       marginTop: theme.spacing(2),
       marginBottom: theme.spacing(2),
-      padding: theme.spacing(2),
+      paddingLeft: theme.spacing(4),
+      paddingRight: theme.spacing(4),
+      paddingTop: theme.spacing(2),
+      paddingBottom: theme.spacing(2),
     },
   })
 );
@@ -34,7 +37,7 @@ const About: React.FC<{}> = () => {
   const classes = useStyles();
   return (
     <ThemeProvider theme={theme}>
-      <Paper className={classes.root}>
+      <Paper className={classes.root} component='article'>
         <Typography variant='h2' align='center' gutterBottom>
           About
         </Typography>

@@ -41,7 +41,7 @@ const Games: React.FC<{}> = () => {
   `);
 
   return (
-    <Paper className={classes.root} component='section'>
+    <Paper id='showcase' className={classes.root} component='section'>
       <List>
         <ThemeProvider theme={theme}>
           {nodes.map((game, index) => {

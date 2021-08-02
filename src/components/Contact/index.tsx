@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const Contact: React.FC<{}> = () => {
   const classes = useStyles();
   return (
-    <div className={classes.root} id='contact'>
+    <section className={classes.root} id='contact'>
       <Avatar />
       <Typography variant='h4' component='h1' align='center'>
         SEVERI VIDNÄS
@@ -30,7 +30,7 @@ const Contact: React.FC<{}> = () => {
       </Typography>
       <Social />
       <About />
-    </div>
+    </section>
   );
 };
 
