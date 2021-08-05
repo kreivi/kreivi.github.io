@@ -21,18 +21,8 @@ const useStyles = makeStyles((theme: Theme) =>
     margin: {
       margin: theme.spacing(1),
     },
-    createdAtContainer: {
-      display: 'flex',
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'center',
-      marginBottom: theme.spacing(1),
-    },
-    createdAtCaption: {
-      marginRight: theme.spacing(0.25),
-    },
-    createdAtValue: {
-      marginLeft: theme.spacing(0.25),
+    shortDescription: {
+      marginBottom: theme.spacing(2),
     },
   })
 );
@@ -60,17 +50,9 @@ const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, scre
       <Typography variant='h3' align='center'>
         {title}
       </Typography>
-      <Typography variant='body2' align='center'>
+      <Typography className={classes.shortDescription} variant='body2' align='center' component='em'>
         {shortDescription}
       </Typography>
-      <Box className={classes.createdAtContainer} component='span'>
-        <Typography className={classes.createdAtCaption} variant='caption'>
-          Created at:
-        </Typography>
-        <Typography className={classes.createdAtValue} variant='caption'>
-          {creationDate}
-        </Typography>
-      </Box>
       <MDXRenderer frontmatter={{ title, creationDate, shortDescription, screenshots }}>{children}</MDXRenderer>
       <div className={classes.margin} />
       <ImageList className={classes.imageList} rowHeight={300}>

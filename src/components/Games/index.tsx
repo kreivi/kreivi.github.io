@@ -11,6 +11,10 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       width: '100%',
     },
+    listItem: {
+      padding: 0,
+      marginBottom: theme.spacing(2),
+    },
   })
 );
 
@@ -41,19 +45,19 @@ const Games: React.FC<{}> = () => {
   `);
 
   return (
-    <Paper id='showcase' className={classes.root} component='section'>
+    <section id='showcase' className={classes.root}>
       <List>
-        <ThemeProvider theme={theme}>
-          {nodes.map((game, index) => {
-            return (
-              <ListItem key={game.id}>
-                <Game {...game?.frontmatter}>{game?.body}</Game>
-              </ListItem>
-            );
-          })}
-        </ThemeProvider>
+        {/* <ThemeProvider theme={theme}> */}
+        {nodes.map((game, index) => {
+          return (
+            <ListItem key={game.id} className={classes.listItem}>
+              <Game {...game?.frontmatter}>{game?.body}</Game>
+            </ListItem>
+          );
+        })}
+        {/* </ThemeProvider> */}
       </List>
-    </Paper>
+    </section>
   );
 };
 
