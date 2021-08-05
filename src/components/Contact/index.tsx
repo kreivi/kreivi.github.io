@@ -10,6 +10,9 @@ const useStyles = makeStyles((theme: Theme) =>
     root: {
       width: '100%',
     },
+    name: {
+      fontFamily: 'Patua One, Serif',
+    },
   })
 );
 
@@ -22,10 +25,10 @@ const Contact: React.FC<{}> = () => {
   return (
     <section className={classes.root} id='contact'>
       <Avatar />
-      <Typography variant='h4' component='h1' align='center'>
+      <Typography className={classes.name} variant='h4' component='h1' align='center'>
         SEVERI VIDNÄS
       </Typography>
-      <Typography color='textSecondary' variant='h6' component='p' align='center'>
+      <Typography className={classes.name} color='textSecondary' variant='h6' component='p' align='center'>
         SOFTWARE DEVELOPER
       </Typography>
       <Social />

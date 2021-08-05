@@ -1,22 +1,27 @@
-import React from "react";
-import { Tooltip } from "@material-ui/core";
-import { Twitter as Icon } from "mdi-material-ui";
+import React from 'react';
+import { Tooltip, makeStyles, Theme, createStyles } from '@material-ui/core';
+import { Twitter as Icon } from 'mdi-material-ui';
 
-import LinkIconButton from "../LinkIconButton";
+import LinkIconButton from '../LinkIconButton';
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    icon: {
+      color: '#1DA1F2',
+    },
+  })
+);
 
 /**
  * Twitter specific LinkIconButton.
  * @returns Twitter LinkIconButton.
  */
 const TwitterLinkButton: React.FC<{}> = () => {
+  const classes = useStyles();
   return (
-    <LinkIconButton
-      href="https://twitter.com/kreivi_krapula"
-      aria-label="Twitter"
-      size="small"
-    >
-      <Tooltip title="Twitter">
-        <Icon />
+    <LinkIconButton href='https://twitter.com/kreivi_krapula' aria-label='Twitter' size='small'>
+      <Tooltip title='Twitter'>
+        <Icon className={classes.icon} />
       </Tooltip>
     </LinkIconButton>
   );
