@@ -21,7 +21,7 @@ frameborder="0" allowfullscreen></iframe>
 #### Top down shooter
 _Top down shooter_ is a prototype where I experimented how to create traditional two stick shooter. I was inspired to try it out after playing some [Helldivers](https://en.wikipedia.org/wiki/Helldivers) by [Arrowhead Studios](https://www.arrowheadgamestudios.com/) and wanted to have some ARPG gear collection mechanisms incorporated into the mix.
 
-I experimented a bit with physical materials for different footstep sounds and created very basic roaming AI controlled characters that wonder around in the level. Next step would be to create gunplay as without it it's not much of a shooter.
+I experimented a bit with physical materials for different footstep sounds and created very basic roaming AI controlled characters that wonder around in the level. Next step would be to create gunplay as without it it's not much of a shooter. Prototype or source code is not currently publicly available.
 <iframe id="ytplayer" type="text/html" width="640" height="360"
 src="https://www.youtube.com/embed/_EkypEjkH8Y?disablekb=1&fs=0&modestbranding=1&iv_load_policy=3"
 frameborder="0" allowfullscreen></iframe>
