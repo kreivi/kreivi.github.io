@@ -56,7 +56,7 @@ const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, scre
       <MDXRenderer frontmatter={{ title, creationDate, shortDescription, screenshots }}>{children}</MDXRenderer>
       <div className={classes.margin} />
       <ImageList className={classes.imageList} rowHeight={300}>
-        {screenshots.map((screenshot, index) => (
+        {screenshots?.map((screenshot, index) => (
           <ImageListItem key={index}>
             <img className={classes.img} src={screenshot} alt={screenshot} />
           </ImageListItem>
