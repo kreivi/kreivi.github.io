@@ -29,7 +29,7 @@
     "gatsby-plugin-react-helmet": "^4.14.0",
     "gatsby-plugin-sharp": "^3.14.3",
     "gatsby-remark-responsive-iframe": "^4.11.0",
-    "gatsby-source-filesystem": "^3.9.0",
+    "gatsby-source-filesystem": "^3.14.0",
     "mdi-material-ui": "^6.22.1",
     "mdx-embed": "0.0.19",
     "netlify-cms-app": "^2.15.30",
