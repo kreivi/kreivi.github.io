@@ -79,7 +79,7 @@ const Game: React.FC<GameProps> = ({
       {gameLink && (
         <LinkIconButton href={gameLink} aria-label='Link to game page' size='medium'>
           <Tooltip title='Itch page'>
-            <StaticImage src='https://static.itch.io/images/badge-color.svg' alt='Itch page' />
+            <StaticImage src='../../../static/assets/images/itch-badge-color.png' alt='Itch page' />
           </Tooltip>
         </LinkIconButton>
       )}
@@ -91,9 +91,9 @@ const Game: React.FC<GameProps> = ({
         </LinkIconButton>
       )}
       {sourceCodeLink && (
-        <LinkIconButton href={gameplayVideoLink} aria-label='Link to game source code' size='medium'>
+        <LinkIconButton href={sourceCodeLink} aria-label='Link to game source code' size='medium'>
           <Tooltip title='GitHub repository'>
-            <StaticImage src='../../../static/assets/images/static/GitHub_Logo_White.png' alt='GitHub repository' />
+            <StaticImage src='../../../static/assets/images/GitHub_Logo_White.png' alt='GitHub repository' />
           </Tooltip>
         </LinkIconButton>
       )}
