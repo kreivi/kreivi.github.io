@@ -37,7 +37,9 @@ const Games: React.FC<{}> = () => {
             creationDate(formatString: "Do MMM YYYY")
             shortDescription
             title
-            screenshots
+            gameLink
+            gameplayVideoLink
+            sourceCodeLink
           }
         }
       }
