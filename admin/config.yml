@@ -27,11 +27,25 @@ collections:
           widget: 'datetime',
           description: 'When was the game (approximately) created',
         }
-      - { label: 'Body', name: 'body', widget: 'markdown', description: 'Rich body text of the game' }
       - {
-          label: 'Screenshots',
-          name: 'screenshots',
-          widget: 'list',
-          summary: '{{fields.image}}',
-          field: { label: 'Image', name: 'Image', widget: 'image' },
+          label: 'Game page link',
+          name: 'gameLink',
+          widget: 'string',
+          description: 'Hyperlink to the games page',
+          required: false,
         }
+      - {
+          label: 'Gameplay video link',
+          name: 'gameplayVideoLink',
+          widget: 'string',
+          description: 'Hyperlink to gameplay video of the game',
+          required: false,
+        }
+      - {
+          label: 'Source code link',
+          name: 'sourceCodeLink',
+          widget: 'string',
+          description: 'Hyperlink to the source code of the game',
+          required: false,
+        }
+      - { label: 'Body', name: 'body', widget: 'markdown', description: 'Rich body text of the game' }
