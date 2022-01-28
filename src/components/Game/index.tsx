@@ -98,7 +98,7 @@ const Game: React.FC<GameProps> = ({
           </LinkIconButton>
         )}
         {sourceCodeLink && (
-          <LinkIconButton href={gameplayVideoLink} aria-label='Link to game source code' size='small'>
+          <LinkIconButton href={sourceCodeLink} aria-label='Link to game source code' size='small'>
             <Tooltip title='GitHub repository'>
               <StaticImage
                 src='../../../static/assets/images/GitHub_Logo_White.png'
