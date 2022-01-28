@@ -1,6 +1,9 @@
 import React from 'react';
-import { makeStyles, createStyles, Theme, Typography, ImageList, ImageListItem, Paper, Box } from '@material-ui/core';
+import { makeStyles, createStyles, Theme, Typography, Paper, Tooltip } from '@material-ui/core';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { StaticImage } from 'gatsby-plugin-image';
+
+import LinkIconButton from '../LinkIconButton';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -9,6 +12,11 @@ const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
       flexDirection: 'column',
       padding: theme.spacing(2),
+    },
+    links: {
+      alignSelf: 'center',
+      justifyContent: 'center',
+      transform: 'translateZ(0)',
     },
     imageList: {
       flexWrap: 'nowrap',
@@ -34,7 +42,9 @@ export type GameProps = {
   title?: string;
   creationDate?: string;
   shortDescription?: string;
-  screenshots?: string[];
+  gameLink?: string;
+  gameplayVideoLink?: string;
+  sourceCodeLink?: string;
   children?: string;
 };
 
@@ -43,7 +53,15 @@ export type GameProps = {
  * @param props game properties
  * @returns game element
  */
-const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, screenshots, children }) => {
+const Game: React.FC<GameProps> = ({
+  title,
+  creationDate,
+  shortDescription,
+  gameLink,
+  gameplayVideoLink,
+  sourceCodeLink,
+  children,
+}) => {
   const classes = useStyles();
   return (
     <Paper className={classes.root} component='article'>
@@ -53,15 +71,46 @@ const Game: React.FC<GameProps> = ({ title, creationDate, shortDescription, scre
       <Typography className={classes.shortDescription} variant='body2' align='center' component='em'>
         {shortDescription}
       </Typography>
-      <MDXRenderer frontmatter={{ title, creationDate, shortDescription, screenshots }}>{children}</MDXRenderer>
+      <MDXRenderer frontmatter={{ title, creationDate, shortDescription }}>{children}</MDXRenderer>
+      <ul className={classes.links}>
+        {gameLink && (
+          <LinkIconButton href={gameLink} aria-label='Link to game page' size='small'>
+            <Tooltip title='Itch page'>
+              <StaticImage
+                src='../../../static/assets/images/itch-badge-color.png'
+                alt='Itch page'
+                placeholder='blurred'
+                width={75}
+              />
+            </Tooltip>
+          </LinkIconButton>
+        )}
+        {gameplayVideoLink && (
+          <LinkIconButton href={gameplayVideoLink} aria-label='Link to gameplay video' size='small'>
+            <Tooltip title='YouTube video'>
+              <StaticImage
+                src='../../../static/assets/images/youtube_social_icon_red.png'
+                alt='YouTube video'
+                placeholder='blurred'
+                width={30}
+              />
+            </Tooltip>
+          </LinkIconButton>
+        )}
+        {sourceCodeLink && (
+          <LinkIconButton href={sourceCodeLink} aria-label='Link to game source code' size='small'>
+            <Tooltip title='GitHub repository'>
+              <StaticImage
+                src='../../../static/assets/images/GitHub_Logo_White.png'
+                alt='GitHub repository'
+                placeholder='blurred'
+                width={50}
+              />
+            </Tooltip>
+          </LinkIconButton>
+        )}
+      </ul>
       <div className={classes.margin} />
-      <ImageList className={classes.imageList} rowHeight={300}>
-        {screenshots?.map((screenshot, index) => (
-          <ImageListItem key={index}>
-            <img className={classes.img} src={screenshot} alt={screenshot} />
-          </ImageListItem>
-        ))}
-      </ImageList>
     </Paper>
   );
 };
