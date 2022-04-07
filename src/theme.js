@@ -1,9 +1,9 @@
-import { createTheme, responsiveFontSizes } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 const DEFAULT_THEME = createTheme();
 const theme = responsiveFontSizes(
   createTheme({
     palette: {
-      type: 'dark',
+      mode: 'dark',
       primary: {
         main: '#ff6f00',
         light: '#ffa040',
@@ -40,7 +40,7 @@ const theme = responsiveFontSizes(
         fontSize: '1rem',
       },
     },
-    overrides: {
+    components: {
       MuiChip: {
         root: {
           marginRight: DEFAULT_THEME.spacing(0.5),
