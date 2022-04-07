@@ -1,5 +1,8 @@
 import React from 'react';
-import { Tooltip, SvgIcon, makeStyles, createStyles, Theme } from '@material-ui/core';
+import { Tooltip, SvgIcon, Theme } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
 
 import LinkIconButton from '../LinkIconButton';
 

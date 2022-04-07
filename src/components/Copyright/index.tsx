@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 /**
  * Copyright text. Automatically gets current year and author name

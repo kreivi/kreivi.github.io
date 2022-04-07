@@ -1,44 +1,25 @@
 import React from 'react';
-import {
-  Paper,
-  Typography,
-  makeStyles,
-  createStyles,
-  Theme,
-  List,
-  ListItem,
-  ListItemText,
-  ListSubheader,
-  Chip,
-} from '@material-ui/core';
+import { Paper, Typography, List, ListItem, ListItemText, ListSubheader, Chip } from '@mui/material';
 
 import { work, gameEngines, programmingLanguages } from './experiences';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      marginTop: theme.spacing(2),
-      marginBottom: theme.spacing(2),
-      paddingLeft: theme.spacing(4),
-      paddingRight: theme.spacing(4),
-      paddingTop: theme.spacing(2),
-      paddingBottom: theme.spacing(2),
-    },
-    experienceListItem: {
-      paddingTop: theme.spacing(0.5),
-      paddingBottom: theme.spacing(0.5),
-    },
-  })
-);
 
 /**
  * About contains short summary of experience and personality.
  * @returns About element
  */
 const About: React.FC<{}> = () => {
-  const classes = useStyles();
   return (
-    <Paper className={classes.root} component='article'>
+    <Paper
+      sx={{
+        marginTop: 2,
+        marginBottom: 2,
+        paddingLeft: 4,
+        paddingRight: 4,
+        paddingTop: 2,
+        paddingBottom: 2,
+      }}
+      component='article'
+    >
       <Typography variant='h2' align='center' gutterBottom>
         About
       </Typography>
@@ -57,7 +38,14 @@ const About: React.FC<{}> = () => {
       </Typography>
       <List disablePadding>
         {work.map((item) => (
-          <ListItem key={item.key} className={classes.experienceListItem} disableGutters>
+          <ListItem
+            key={item.key}
+            sx={{
+              paddingTop: 0.5,
+              paddingBottom: 0.5,
+            }}
+            disableGutters
+          >
             <ListItemText primary={item.primary} />
           </ListItem>
         ))}

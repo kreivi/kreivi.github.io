@@ -1,5 +1,7 @@
 import React from 'react';
-import { Tooltip, makeStyles, Theme, createStyles } from '@material-ui/core';
+import { Tooltip, Theme } from '@mui/material';
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
 import { Twitter as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';

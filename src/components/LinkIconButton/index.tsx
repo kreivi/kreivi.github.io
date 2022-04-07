@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconButton, IconButtonProps, Link } from '@material-ui/core';
+import { IconButton, IconButtonProps, Link } from '@mui/material';
 
 export type LinkIconButtonType = {
   href: string;
@@ -12,7 +12,13 @@ export type LinkIconButtonType = {
  */
 const LinkIconButton: React.FC<LinkIconButtonType> = ({ href, children, ...rest }) => {
   return (
-    <IconButton component={Link} href={href} rel='noreferrer' target='_blank' {...rest}>
+    <IconButton
+      component={Link}
+      href={href}
+      rel='noreferrer'
+      target='_blank'
+      {...rest}
+      size="large">
       {children}
     </IconButton>
   );

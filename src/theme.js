@@ -1,7 +1,7 @@
-import { createTheme, responsiveFontSizes } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes, adaptV4Theme } from '@mui/material/styles';
 const DEFAULT_THEME = createTheme();
 const theme = responsiveFontSizes(
-  createTheme({
+  createTheme(adaptV4Theme({
     palette: {
       mode: 'dark',
       primary: {
@@ -51,7 +51,7 @@ const theme = responsiveFontSizes(
         },
       },
     },
-  })
+  }))
 );
 
 export default theme;

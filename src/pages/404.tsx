@@ -2,7 +2,10 @@ import React from 'react';
 import { Link, PageProps } from 'gatsby';
 
 import Layout from '../components/Layout';
-import { makeStyles, createStyles, Theme, Typography, Link as MuiLink, Paper } from '@material-ui/core';
+import { Theme, Typography, Link as MuiLink, Paper } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

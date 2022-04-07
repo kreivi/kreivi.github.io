@@ -1,5 +1,8 @@
 import React from 'react';
-import { Typography, makeStyles, createStyles, Theme } from '@material-ui/core';
+import { Typography, Theme } from '@mui/material';
+
+import makeStyles from '@mui/styles/makeStyles';
+import createStyles from '@mui/styles/createStyles';
 
 import Avatar from '../Avatar';
 import Social from '../Social';
