@@ -10,7 +10,7 @@ import { navigation } from './navigation';
  */
 const Header: React.FC<{}> = () => {
   return (
-    <AppBar position='static' color='default'>
+    <AppBar position='static'>
       <Toolbar component='nav'>
         {navigation.map((link) => (
           <MuiLink

@@ -19,7 +19,6 @@ const Footer: React.FC<{}> = () => {
         padding: 1,
       }}
       position='relative'
-      color='default'
       component='footer'
     >
       <Social />

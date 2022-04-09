@@ -31,7 +31,7 @@ const Contact: React.FC<{}> = () => {
       <Typography className={classes.name} variant='h4' component='h1' align='center'>
         SEVERI VIDNÄS
       </Typography>
-      <Typography className={classes.name} color='textSecondary' variant='h6' component='p' align='center'>
+      <Typography className={classes.name} variant='h6' component='p' align='center'>
         SOFTWARE DEVELOPER
       </Typography>
       <Social />
