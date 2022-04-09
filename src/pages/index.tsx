@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageProps } from 'gatsby';
-import { Typography } from '@material-ui/core';
+import { Typography } from '@mui/material';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';

@@ -1,29 +1,19 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import { makeStyles, createStyles, Theme, Paper, List, ListItem, ThemeProvider } from '@material-ui/core';
-import { MDXProvider } from '@mdx-js/react';
+import { Theme, Paper, List, ListItem, Box } from '@mui/material';
 
 import Game from '../Game';
-import theme from './theme';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-    },
-    listItem: {
-      padding: 0,
-      marginBottom: theme.spacing(2),
-    },
-  })
-);
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
 
 /**
  * Lists games found under from `content/game`.
  * @returns games element
  */
 const Games: React.FC<{}> = () => {
-  const classes = useStyles();
   // TODO: This needs to be refined once there is some other markdown content than games
   const {
     allMdx: { nodes },
@@ -47,19 +37,29 @@ const Games: React.FC<{}> = () => {
   `);
 
   return (
-    <section id='showcase' className={classes.root}>
+    <Box
+      id='showcase'
+      component='section'
+      sx={{
+        width: '100%',
+      }}
+    >
       <List>
-        {/* <ThemeProvider theme={theme}> */}
         {nodes.map((game, index) => {
           return (
-            <ListItem key={game.id} className={classes.listItem}>
+            <ListItem
+              key={game.id}
+              sx={{
+                padding: 0,
+                marginBottom: 2,
+              }}
+            >
               <Game {...game?.frontmatter}>{game?.body}</Game>
             </ListItem>
           );
         })}
-        {/* </ThemeProvider> */}
       </List>
-    </section>
+    </Box>
   );
 };
 

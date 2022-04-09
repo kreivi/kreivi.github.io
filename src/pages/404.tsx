@@ -2,27 +2,7 @@ import React from 'react';
 import { Link, PageProps } from 'gatsby';
 
 import Layout from '../components/Layout';
-import { makeStyles, createStyles, Theme, Typography, Link as MuiLink, Paper } from '@material-ui/core';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'center',
-    },
-    title: {
-      margin: theme.spacing(2),
-    },
-    message: {
-      margin: theme.spacing(2),
-    },
-    link: {
-      margin: theme.spacing(4),
-    },
-  })
-);
+import { Typography, Link as MuiLink, Paper } from '@mui/material';
 
 /**
  * NotFound page properties
@@ -34,15 +14,21 @@ type NotFoundPageProps = PageProps<{}>;
  * @returns not found page element
  */
 const NotFoundPage: React.FC<NotFoundPageProps> = () => {
-  const classes = useStyles();
   return (
     <Layout>
-      <Paper className={classes.root}>
-        <Typography className={classes.title} variant='h1' color='error'>
+      <Paper
+        sx={{
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <Typography sx={{ margin: 2 }} variant='h1' color='error'>
           Oops!
         </Typography>
-        <Typography className={classes.message}>The page does not exist</Typography>
-        <MuiLink className={classes.link} component={Link} to='/'>
+        <Typography sx={{ margin: 2 }}>The page does not exist</Typography>
+        <MuiLink sx={{ margin: 4 }} component={Link} to='/'>
           Home
         </MuiLink>
       </Paper>

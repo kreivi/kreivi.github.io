@@ -1,5 +1,7 @@
 import React from 'react';
-import { createStyles, makeStyles, Theme, Tooltip } from '@material-ui/core';
+import { Theme, Tooltip } from '@mui/material';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
 import { Linkedin as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';

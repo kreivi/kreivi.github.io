@@ -1,39 +1,9 @@
 import React from 'react';
-import { makeStyles, createStyles, Theme, Typography, Paper, Tooltip } from '@material-ui/core';
+import { Typography, Paper, Tooltip, List, Box } from '@mui/material';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { StaticImage } from 'gatsby-plugin-image';
 
 import LinkIconButton from '../LinkIconButton';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-      display: 'flex',
-      flexDirection: 'column',
-      padding: theme.spacing(2),
-    },
-    links: {
-      alignSelf: 'center',
-      justifyContent: 'center',
-      transform: 'translateZ(0)',
-    },
-    imageList: {
-      flexWrap: 'nowrap',
-      // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-      transform: 'translateZ(0)',
-    },
-    img: {
-      objectFit: 'contain',
-    },
-    margin: {
-      margin: theme.spacing(1),
-    },
-    shortDescription: {
-      marginBottom: theme.spacing(2),
-    },
-  })
-);
 
 /**
  * Game properties.
@@ -62,17 +32,30 @@ const Game: React.FC<GameProps> = ({
   sourceCodeLink,
   children,
 }) => {
-  const classes = useStyles();
   return (
-    <Paper className={classes.root} component='article'>
+    <Paper
+      sx={{
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        padding: 2,
+      }}
+      component='article'
+    >
       <Typography variant='h3' align='center'>
         {title}
       </Typography>
-      <Typography className={classes.shortDescription} variant='body2' align='center' component='em'>
+      <Typography sx={{ marginBottom: 2 }} variant='body2' align='center' component='em'>
         {shortDescription}
       </Typography>
       <MDXRenderer frontmatter={{ title, creationDate, shortDescription }}>{children}</MDXRenderer>
-      <ul className={classes.links}>
+      <List
+        sx={{
+          alignSelf: 'center',
+          justifyContent: 'center',
+          transform: 'translateZ(0)',
+        }}
+      >
         {gameLink && (
           <LinkIconButton href={gameLink} aria-label='Link to game page' size='small'>
             <Tooltip title='Itch page'>
@@ -109,8 +92,8 @@ const Game: React.FC<GameProps> = ({
             </Tooltip>
           </LinkIconButton>
         )}
-      </ul>
-      <div className={classes.margin} />
+      </List>
+      <Box sx={{ margin: 1 }} />
     </Paper>
   );
 };

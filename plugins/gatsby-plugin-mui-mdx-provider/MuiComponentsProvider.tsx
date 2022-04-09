@@ -1,6 +1,6 @@
 import React from 'react';
 import { MDXProvider } from '@mdx-js/react';
-import { Typography, Link, Divider, List, ListItem, Table, TableRow, TableCell } from '@material-ui/core';
+import { Typography, Link, Divider, List, ListItem, Table, TableRow, TableCell } from '@mui/material';
 
 const components = {
   p: (props) => <Typography gutterBottom align='justify' {...props} />,
