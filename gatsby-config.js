@@ -33,5 +33,11 @@ module.exports = {
       },
     },
     `gatsby-plugin-mui-mdx-provider`,
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `${__dirname}/static/assets/images/favicon.png`,
+      },
+    },
   ],
 };
