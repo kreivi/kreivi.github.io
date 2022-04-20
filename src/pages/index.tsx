@@ -1,6 +1,6 @@
 import React from 'react';
+/* @ts-ignore */ // This package is part of the main package.json
 import { PageProps } from 'gatsby';
-import { Typography } from '@mui/material';
 
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
@@ -16,7 +16,7 @@ type IndexPageProps = PageProps<{}>;
  * Domain index page.
  * @returns page element
  */
-const IndexPage: React.FC<IndexPageProps> = () => {
+const IndexPage: React.FC<IndexPageProps> = (props) => {
   return (
     <Layout>
       <SEO />
