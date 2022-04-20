@@ -6,7 +6,6 @@ import { ThemeProvider } from '@mui/material/styles';
 import theme from './theme';
 
 export default function TopLayout(props) {
-  console.log(theme);
   return (
     <React.Fragment>
       <Helmet>

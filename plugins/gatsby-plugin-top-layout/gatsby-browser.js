@@ -3,6 +3,5 @@ import React from 'react';
 import TopLayout from './TopLayout';
 
 export const wrapRootElement = ({ element }) => {
-  console.log(element);
   return <TopLayout>{element}</TopLayout>;
 };
