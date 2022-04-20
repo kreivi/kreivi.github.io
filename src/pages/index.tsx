@@ -16,7 +16,8 @@ type IndexPageProps = PageProps<{}>;
  * Domain index page.
  * @returns page element
  */
-const IndexPage: React.FC<IndexPageProps> = () => {
+const IndexPage: React.FC<IndexPageProps> = (props) => {
+  console.log(props);
   return (
     <Layout>
       <SEO />

@@ -32,6 +32,22 @@ const Game: React.FC<GameProps> = ({
   sourceCodeLink,
   children,
 }) => {
+  let GameLinkComponent = null;
+  // if (gameLink) {
+  //   GameLinkComponent = React.forwardRef((props, ref) => (
+  //     <LinkIconButton href={gameLink} aria-label='Link to game page' size='small'>
+  //       <Tooltip ref={ref} title='Itch page'>
+  //         <StaticImage
+  //           ref={ref}
+  //           src='../../../static/assets/images/itch-badge-color.png'
+  //           alt='Itch page'
+  //           placeholder='blurred'
+  //           width={75}
+  //         />
+  //       </Tooltip>
+  //     </LinkIconButton>
+  //   ));
+  // }
   return (
     <Paper
       sx={{
@@ -56,7 +72,8 @@ const Game: React.FC<GameProps> = ({
           transform: 'translateZ(0)',
         }}
       >
-        {gameLink && (
+        {GameLinkComponent && <GameLinkComponent />}
+        {/* {gameLink && (
           <LinkIconButton href={gameLink} aria-label='Link to game page' size='small'>
             <Tooltip title='Itch page'>
               <StaticImage
@@ -91,7 +108,7 @@ const Game: React.FC<GameProps> = ({
               />
             </Tooltip>
           </LinkIconButton>
-        )}
+        )} */}
       </List>
       <Box sx={{ margin: 1 }} />
     </Paper>

@@ -1,7 +1,8 @@
 /* eslint-disable import/prefer-default-export, react/prop-types */
-import React from "react";
-import TopLayout from "./TopLayout";
+import React from 'react';
+import TopLayout from './TopLayout';
 
 export const wrapRootElement = ({ element }) => {
+  console.log(element);
   return <TopLayout>{element}</TopLayout>;
 };
