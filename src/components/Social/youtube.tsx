@@ -1,29 +1,18 @@
 import React from 'react';
-import { Tooltip, Theme } from '@mui/material';
-import makeStyles from '@mui/styles/makeStyles';
-import createStyles from '@mui/styles/createStyles';
+import { Tooltip } from '@mui/material';
 import { Youtube as Icon } from 'mdi-material-ui';
 
 import LinkIconButton from '../LinkIconButton';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    icon: {
-      color: '#FF0000',
-    },
-  })
-);
 
 /**
  * YouTube specific LinkIconButton.
  * @returns YouTube LinkIconButton.
  */
 const YouTubeLinkButton: React.FC<{}> = () => {
-  const classes = useStyles();
   return (
     <LinkIconButton href='https://www.youtube.com/channel/UCnBgkNXb-9QKU7a4xyc4pHw' aria-label='YouTube' size='small'>
       <Tooltip title='YouTube'>
-        <Icon className={classes.icon} />
+        <Icon />
       </Tooltip>
     </LinkIconButton>
   );

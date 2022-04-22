@@ -53,6 +53,8 @@ const Avatar: React.FC<{}> = () => {
           src='../../../static/assets/images/avatar_artistic.png'
           alt={author}
           placeholder='blurred'
+          width={80}
+          height={80}
         />
       </Box>
     </Box>
