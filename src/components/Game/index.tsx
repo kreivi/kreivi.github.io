@@ -32,22 +32,6 @@ const Game: React.FC<GameProps> = ({
   sourceCodeLink,
   children,
 }) => {
-  let GameLinkComponent = null;
-  // if (gameLink) {
-  //   GameLinkComponent = React.forwardRef((props, ref) => (
-  //     <LinkIconButton href={gameLink} aria-label='Link to game page' size='small'>
-  //       <Tooltip ref={ref} title='Itch page'>
-  //         <StaticImage
-  //           ref={ref}
-  //           src='../../../static/assets/images/itch-badge-color.png'
-  //           alt='Itch page'
-  //           placeholder='blurred'
-  //           width={75}
-  //         />
-  //       </Tooltip>
-  //     </LinkIconButton>
-  //   ));
-  // }
   return (
     <Paper
       sx={{
@@ -72,43 +56,36 @@ const Game: React.FC<GameProps> = ({
           transform: 'translateZ(0)',
         }}
       >
-        {GameLinkComponent && <GameLinkComponent />}
-        {/* {gameLink && (
+        {gameLink && (
           <LinkIconButton href={gameLink} aria-label='Link to game page' size='small'>
-            <Tooltip title='Itch page'>
-              <StaticImage
-                src='../../../static/assets/images/itch-badge-color.png'
-                alt='Itch page'
-                placeholder='blurred'
-                width={75}
-              />
-            </Tooltip>
+            <StaticImage
+              src='../../../static/assets/images/itch-badge-color.png'
+              alt='Itch page'
+              placeholder='blurred'
+              width={75}
+            />
           </LinkIconButton>
         )}
         {gameplayVideoLink && (
           <LinkIconButton href={gameplayVideoLink} aria-label='Link to gameplay video' size='small'>
-            <Tooltip title='YouTube video'>
-              <StaticImage
-                src='../../../static/assets/images/youtube_social_icon_red.png'
-                alt='YouTube video'
-                placeholder='blurred'
-                width={30}
-              />
-            </Tooltip>
+            <StaticImage
+              src='../../../static/assets/images/youtube_social_icon_red.png'
+              alt='YouTube video'
+              placeholder='blurred'
+              width={30}
+            />
           </LinkIconButton>
         )}
         {sourceCodeLink && (
           <LinkIconButton href={sourceCodeLink} aria-label='Link to game source code' size='small'>
-            <Tooltip title='GitHub repository'>
-              <StaticImage
-                src='../../../static/assets/images/GitHub_Logo_White.png'
-                alt='GitHub repository'
-                placeholder='blurred'
-                width={50}
-              />
-            </Tooltip>
+            <StaticImage
+              src='../../../static/assets/images/GitHub_Logo_White.png'
+              alt='GitHub repository'
+              placeholder='blurred'
+              width={50}
+            />
           </LinkIconButton>
-        )} */}
+        )}
       </List>
       <Box sx={{ margin: 1 }} />
     </Paper>

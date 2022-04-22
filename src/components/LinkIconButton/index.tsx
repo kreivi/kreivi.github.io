@@ -12,13 +12,7 @@ export type LinkIconButtonType = {
  */
 const LinkIconButton: React.FC<LinkIconButtonType> = ({ href, children, ...rest }) => {
   return (
-    <IconButton
-      component={Link}
-      href={href}
-      rel='noreferrer'
-      target='_blank'
-      {...rest}
-      size="large">
+    <IconButton component={Link} href={href} rel='noreferrer' target='_blank' size='large' {...rest}>
       {children}
     </IconButton>
   );

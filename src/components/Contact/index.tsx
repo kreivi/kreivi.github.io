@@ -1,42 +1,27 @@
 import React from 'react';
-import { Typography, Theme } from '@mui/material';
-
-import makeStyles from '@mui/styles/makeStyles';
-import createStyles from '@mui/styles/createStyles';
+import { Typography, Box } from '@mui/material';
 
 import Avatar from '../Avatar';
 import Social from '../Social';
 import About from '../About';
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    root: {
-      width: '100%',
-    },
-    name: {
-      fontFamily: 'Patua One, Serif',
-    },
-  })
-);
 
 /**
  * Contact element will display basic contact information.
  * @returns Contact element.
  */
 const Contact: React.FC<{}> = () => {
-  const classes = useStyles();
   return (
-    <section className={classes.root} id='contact'>
+    <Box component={'section'} id='contact' sx={{ width: '100%' }}>
       <Avatar />
-      <Typography className={classes.name} variant='h4' component='h1' align='center'>
+      <Typography sx={{ fontFamily: 'Patua One, Serif' }} color={'inherit'} variant='h4' component='h1' align='center'>
         SEVERI VIDNÄS
       </Typography>
-      <Typography className={classes.name} variant='h6' component='p' align='center'>
+      <Typography sx={{ fontFamily: 'Patua One, Serif' }} color={'inherit'} variant='h6' component='p' align='center'>
         SOFTWARE DEVELOPER
       </Typography>
       <Social />
       <About />
-    </section>
+    </Box>
   );
 };
 
