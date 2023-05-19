@@ -1,10 +1,10 @@
-import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { Theme, Paper, List, ListItem, Box } from '@mui/material';
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { Theme, Paper, List, ListItem, Box } from "@mui/material";
 
-import Game from '../Game';
+import Game from "../Game";
 
-declare module '@mui/styles/defaultTheme' {
+declare module "@mui/styles/defaultTheme" {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends Theme {}
 }
@@ -19,7 +19,10 @@ const Games: React.FC<{}> = () => {
     allMdx: { nodes },
   } = useStaticQuery(graphql`
     query allGamesQuery {
-      allMdx(sort: { fields: frontmatter___creationDate, order: DESC }) {
+      allFile(
+        filter: { sourceInstanceName: { eq: "game" } }
+        sort: { fields: frontmatter___creationDate, order: DESC }
+      ) {
         nodes {
           id
           body
@@ -38,10 +41,10 @@ const Games: React.FC<{}> = () => {
 
   return (
     <Box
-      id='showcase'
-      component='section'
+      id="showcase"
+      component="section"
       sx={{
-        width: '100%',
+        width: "100%",
       }}
     >
       <List>
