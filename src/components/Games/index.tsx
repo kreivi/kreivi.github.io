@@ -19,9 +19,9 @@ const Games: React.FC<{}> = () => {
     allMdx: { nodes },
   } = useStaticQuery(graphql`
     query allGamesQuery {
-      allFile(
-        filter: { sourceInstanceName: { eq: "game" } }
+      allMdx(
         sort: { fields: frontmatter___creationDate, order: DESC }
+        filter: { fileAbsolutePath: { regex: "/content/game/" } }
       ) {
         nodes {
           id
