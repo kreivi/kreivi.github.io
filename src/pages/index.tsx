@@ -6,6 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import Contact from '../components/Contact';
 import Games from '../components/Games';
+import Blogs from '../components/Blogs';
 
 /**
  * Index page properties.
@@ -20,8 +21,7 @@ const IndexPage: React.FC<IndexPageProps> = (props) => {
   return (
     <Layout>
       <SEO />
-      <Contact />
-      <Games />
+      <Blogs />
     </Layout>
   );
 };

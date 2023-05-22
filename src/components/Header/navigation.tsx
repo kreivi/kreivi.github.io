@@ -8,13 +8,13 @@ export const navigation = [
     label: 'Home',
   },
   {
-    key: 'contact',
-    to: '/#contact',
-    label: 'Info',
+    key: 'about',
+    to: '/about',
+    label: 'About',
   },
   {
-    key: 'showcase',
-    to: '/#showcase',
-    label: 'Showcase',
+    key: 'games',
+    to: '/games',
+    label: 'Games',
   },
 ];
