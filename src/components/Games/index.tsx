@@ -19,10 +19,7 @@ const Games: React.FC<{}> = () => {
     allMdx: { nodes },
   } = useStaticQuery(graphql`
     query allGamesQuery {
-      allMdx(
-        sort: { frontmatter: { creationDate: DESC } }
-        filter: { fileAbsolutePath: { regex: "/content/game/" } }
-      ) {
+      allMdx(sort: { frontmatter: { creationDate: DESC } }) {
         nodes {
           id
           body
