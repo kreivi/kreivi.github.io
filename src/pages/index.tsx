@@ -4,9 +4,9 @@ import { PageProps } from "gatsby";
 
 import Layout from "../components/Layout";
 import SEO from "../components/SEO";
-import Contact from "../components/Contact";
-import Games from "../components/Games";
 import Blogs from "../components/Blogs";
+import Profile from "../components/Profile";
+import { Paper } from "@mui/material";
 
 /**
  * Index page properties.
@@ -19,7 +19,14 @@ type IndexPageProps = PageProps<{}>;
  */
 const IndexPage: React.FC<IndexPageProps> = (props) => {
   return (
-    <Layout>
+    <Layout
+      main={<Blogs />}
+      aside={
+        <Paper>
+          <Profile />
+        </Paper>
+      }
+    >
       <SEO />
     </Layout>
   );
