@@ -37,6 +37,7 @@ const SEO: React.FC<SEOType> = ({ author, title, description }: SEOType) => {
     `
   );
   const { pathname } = useLocation();
+  console.log(pathname);
   const seoTitle = title ? `${title} | ${siteMetadata.title}` : siteMetadata.title;
   const seoDescription = description || siteMetadata.description;
   const seoCanonical = `${siteMetadata.siteUrl}${pathname}`;

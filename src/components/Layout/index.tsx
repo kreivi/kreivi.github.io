@@ -29,15 +29,14 @@ const Layout: React.FC<LayoutProps> = ({ main, aside }: LayoutProps) => {
       <Header />
       <Container
         sx={{
-          flexDirection: "column",
           justifyContent: "center",
           marginTop: 1,
           marginBottom: 2,
         }}
       >
-        <Grid container>
+        <Grid container direction="row">
           <Grid xs={10}>
-            <Box component="main">{main}</Box>
+            <Box component="main" sx={{ marginX: 2}}>{main}</Box>
           </Grid>
           <Grid xs={2}>
             <Box component="aside">{aside}</Box>

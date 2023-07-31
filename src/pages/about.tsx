@@ -10,10 +10,10 @@ type AboutPageProps = PageProps<{}>;
 
 const AboutPage: React.FC<AboutPageProps> = (props) => {
   return (
-    <Layout>
-      <SEO />
-      <Contact />
-    </Layout>
+    <>
+      <SEO title='About' />
+      <Layout main={<Contact />} />
+    </>
   );
 };
 

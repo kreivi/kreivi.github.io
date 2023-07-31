@@ -6,7 +6,7 @@ import Social from "../Social";
 
 const Profile: React.FC<{}> = () => {
   return (
-    <React.Fragment>
+    <>
       <Avatar />
       <Typography
         sx={{ fontFamily: "Patua One, Serif" }}
@@ -27,7 +27,7 @@ const Profile: React.FC<{}> = () => {
         SOFTWARE DEVELOPER
       </Typography>
       <Social />
-    </React.Fragment>
+    </>
   );
 };
 

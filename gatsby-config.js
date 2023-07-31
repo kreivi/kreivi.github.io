@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Severi Vidnäs Portfolio`,
+    title: `Severi Vidnäs`,
     author: `Severi Vidnäs`,
-    description: `Portfolio site for personal use.`,
+    description: `Developer site for personal use.`,
     siteUrl: `https://kreivi.github.io`,
   },
   plugins: [
