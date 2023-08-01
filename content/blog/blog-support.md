@@ -1,9 +1,10 @@
 ---
 title: Blog support
-shortDescription: Added blogging outlet for my development stuff.
-creationDate: 2023-05-21T18:34:31.503Z
+shortDescription: Added blogging support to the site.
+creationDate: 2023-08-01T17:02:34.384Z
 ---
+For some time I wanted to have an outlet to write about game development stuff that might never end up being anything more than a prototype or a test of certain idea. Sometimes (like now) I might end up writing something about web or cloud development but main focus is probably on game development topics.
 
-I wanted to have an outlet to write about the development stuff I do and figured I'd give it a go to add blogging support to the site. This way I have full control of how and what the blog entries look like and I don't have to redirect anyone to another site to read up about it if I ever manage to write anything interesting.
+After exploring some blogging platforms, I realized that having full control over the features and look & feel of my content was important to me. Adding the blogging support wasn't too difficult as I had already done the heavy lifting when I originally made the site and decided to put expandable [Netlify content management system](https://v1.netlifycms.org/) in for future needs. 
 
-Not much else to say at this point really. Hopefully I'll manage to blog something interesting in the future.
+Not much else to say at this point really. Hopefully I'll manage to write something interesting in the future.
