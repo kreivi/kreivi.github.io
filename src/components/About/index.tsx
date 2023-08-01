@@ -53,13 +53,13 @@ const About: React.FC<{}> = () => {
           Programming languages:
         </ListSubheader>
         {programmingLanguages.map((item) => (
-          <Chip key={item.key} label={item.primary} color='secondary' />
+          <Chip key={item.key} label={item.primary} />
         ))}
         <ListSubheader disableSticky disableGutters>
           Game engines:
         </ListSubheader>
         {gameEngines.map((item) => (
-          <Chip key={item.key} label={item.primary} color='secondary' />
+          <Chip key={item.key} label={item.primary} />
         ))}
       </List>
     </Paper>

@@ -3,24 +3,18 @@ import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
-    mode: 'dark',
     primary: {
-      main: '#ff6f00',
-      light: '#ffa040',
-      dark: '#c43e00',
-      contrastText: '#000000',
+      main: '#001d3d',
     },
     secondary: {
-      main: '#1565c0',
-      light: '#5e92f3',
-      dark: '#003c8f',
-      contrastText: '#ffffff',
+      main: '#5f0f40',
     },
     background: {
-      default: '#00021c',
+      default: '#edede9',
     },
   },
   typography: {
+    fontFamily: ['Lato', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'].join(','),
     h1: {
       fontSize: '3.5rem',
     },

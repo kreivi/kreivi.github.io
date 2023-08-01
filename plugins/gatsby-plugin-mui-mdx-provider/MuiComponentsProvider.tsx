@@ -26,7 +26,7 @@ const components = {
   delete: (props) => <Typography component='del' {...props} />,
   inlineCode: (props) => <Typography component='code' {...props} />,
   hr: (props) => <Divider component='hr' {...props} />,
-  a: (props) => <Link color='primary' {...props} />,
+  a: (props) => <Link target='_blank' rel='noreferrer' {...props} />,
 };
 
 const MuiComponentProvider = ({ children }) => {
