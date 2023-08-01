@@ -38,19 +38,19 @@ export const programmingLanguages: Array<SimpleListItemType> = [
   },
   {
     key: 'programming-language-03',
-    primary: 'GDScript',
+    primary: 'C#',
   },
   {
     key: 'programming-language-04',
-    primary: 'Java',
+    primary: 'GDScript',
   },
   {
     key: 'programming-language-05',
-    primary: 'LuaScript',
+    primary: 'Java',
   },
   {
     key: 'programming-language-06',
-    primary: 'C#',
+    primary: 'LuaScript',
   },
 ];
 

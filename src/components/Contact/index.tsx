@@ -1,8 +1,8 @@
-import React from "react";
-import { Box } from "@mui/material";
+import React from 'react';
+import { Box } from '@mui/material';
 
-import Profile from "../Profile";
-import About from "../About";
+import Profile from '../Profile';
+import About from '../About';
 
 /**
  * Contact element will display basic contact information.
@@ -10,7 +10,7 @@ import About from "../About";
  */
 const Contact: React.FC<{}> = () => {
   return (
-    <Box component={"section"} id="contact" sx={{ width: "100%" }}>
+    <Box component={'section'} id='contact' sx={{ width: '100%' }}>
       <Profile />
       <About />
     </Box>
