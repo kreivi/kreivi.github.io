@@ -20,6 +20,8 @@ const Footer: React.FC<{}> = () => {
       }}
       position='relative'
       component='footer'
+      color='inherit'
+      enableColorOnDark
     >
       <Social />
       <Copyright />
