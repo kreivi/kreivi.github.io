@@ -1,9 +1,12 @@
 ---
 title: Blog support
-shortDescription: Added blogging outlet for my development stuff.
-creationDate: 2023-05-21T18:34:31.503Z
+shortDescription: Added blogging support to the site.
+creationDate: 2023-08-01T17:02:34.384Z
 ---
+For some time I wanted to have an outlet to write about development stuff that might never end up being more than a prototype or a test of certain idea.
 
-I wanted to have an outlet to write about the development stuff I do and figured I'd give it a go to add blogging support to the site. This way I have full control of how and what the blog entries look like and I don't have to redirect anyone to another site to read up about it if I ever manage to write anything interesting.
+I checked out couple of blogging platforms but quickly came to conclusion that I want to have full control of the features and look & feel of the content I write.
 
-Not much else to say at this point really. Hopefully I'll manage to blog something interesting in the future.
+It wasn't too difficult as I had already done the heavy lifting when I originally made the site and decided to put expandable content management system in for future needs.
+
+N﻿ot much else to say at this point really. Hopefully I'll manage to write something interesting in the future.
