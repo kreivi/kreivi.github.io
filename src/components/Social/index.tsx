@@ -1,5 +1,5 @@
 import React from "react";
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 
 import LinkedIn from "./linkedin";
 import GitHub from "./github";
@@ -13,19 +13,29 @@ import YouTube from "./youtube";
  */
 const Social: React.FC<{}> = () => {
   return (
-    <Box
+    <Grid
+      container
       sx={{
-        display: "flex",
         justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <LinkedIn />
-      <GitHub />
-      <Mastodon />
-      <Itch />
-      <YouTube />
-    </Box>
+      <Grid>
+        <LinkedIn />
+      </Grid>
+      <Grid>
+        <GitHub />
+      </Grid>
+      <Grid>
+        <Mastodon />
+      </Grid>
+      <Grid>
+        <Itch />
+      </Grid>
+      <Grid>
+        <YouTube />
+      </Grid>
+    </Grid>
   );
 };
 

@@ -1,4 +1,5 @@
-import { Container, Box, Grid } from "@mui/material";
+import { Container, Box, Grid, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/styles";
 import React from "react";
 
 import Header from "../Header";
@@ -18,6 +19,8 @@ export type LayoutProps = {
  * @returns Layout element
  */
 const Layout: React.FC<LayoutProps> = ({ main, aside }: LayoutProps) => {
+  const theme = useTheme();
+  const enableAside = useMediaQuery(theme.breakpoints.up("md"));
   return (
     <Box
       sx={{
@@ -34,12 +37,21 @@ const Layout: React.FC<LayoutProps> = ({ main, aside }: LayoutProps) => {
           marginBottom: 2,
         }}
       >
-        <Grid container direction="row">
-          <Grid xs={10}>
-            <Box component="main" sx={{ marginX: 2}}>{main}</Box>
+        <Grid container direction={enableAside ? "row" : "column-reverse"}>
+          <Grid xs={enableAside ? 10 : 12}>
+            <Box component="main" sx={{ marginX: 2 }}>
+              {main}
+            </Box>
           </Grid>
-          <Grid xs={2}>
-            <Box component="aside">{aside}</Box>
+          <Grid xs={enableAside ? 2 : 12}>
+            <Box
+              sx={{
+                marginX: enableAside ? 0 : 2,
+              }}
+              component="aside"
+            >
+              {aside}
+            </Box>
           </Grid>
         </Grid>
       </Container>
