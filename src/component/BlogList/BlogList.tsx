@@ -1,3 +1,4 @@
+import React from "react";
 import { getBlogPosts } from "@/app/blog/utils";
 import { Divider, List, Typography } from "@mui/material";
 import BlogListItem from "../BlogListItem";
@@ -10,10 +11,10 @@ export default function BlogsList() {
     return (
         <List>
             {allBlogs.map((blog) => (
-                <div key={blog.data.slug}>
-                    <BlogListItem key={blog.data.title} blog={blog.data} />
+                <React.Fragment key={blog.data.slug}>
+                    <BlogListItem blog={blog.data} />
                     <Divider component="li" />
-                </div>
+                </React.Fragment>
             ))}
         </List>
     );

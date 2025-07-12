@@ -1,6 +1,4 @@
-import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
 import { getMDXFiles, readMDXFile } from "@/lib/markdownUtils";
 
 const authorsDirectory = path.join(process.cwd(), "content", "meta", "author");

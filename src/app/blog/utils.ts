@@ -1,5 +1,3 @@
-import fs from "fs";
-import matter from "gray-matter";
 import path from "path";
 import { AuthorMetadata, getAuthorsByNames } from "../_author/utils";
 import { getTagsByNames, TagMetadata } from "../_tag/utils";
@@ -31,7 +29,18 @@ export type BlogPostMetadata = {
     tags: TagMetadata[];
 };
 
-function matterDataToBlogPostMetadata(matterData: any, filePath: string): BlogPostMetadata {
+
+interface BlogMatterData {
+    title: string;
+    authors: string[];
+    created: string | Date;
+    modified?: string | Date;
+    overview: string;
+    tags: string[];
+    [key: string]: unknown;
+}
+
+function matterDataToBlogPostMetadata(matterData: BlogMatterData, filePath: string): BlogPostMetadata {
     return {
         slug: path.basename(filePath, path.extname(filePath)),
         title: matterData.title,
@@ -47,7 +56,7 @@ export function getBlogBySlug(slug: string): BlogPost | null {
     const filePath = path.join(blogsDirectory, `${slug}.mdx`);
     const matterResult = readMDXFile(filePath);
     return {
-        data: matterDataToBlogPostMetadata(matterResult.data, filePath),
+        data: matterDataToBlogPostMetadata(matterResult.data as BlogMatterData, filePath),
         content: matterResult.content,
     }
 }
@@ -74,7 +83,7 @@ export function getBlogPosts(): BlogPost[] {
         const fullPath = path.join(blogsDirectory, file);
         const matterResult = readMDXFile(fullPath);
         return {
-            data: matterDataToBlogPostMetadata(matterResult.data, fullPath),
+            data: matterDataToBlogPostMetadata(matterResult.data as BlogMatterData, fullPath),
             content: matterResult.content,
         } as BlogPost;
     });

@@ -22,12 +22,12 @@ export default async function BlogPage({ params }: { params: Promise<{ slug: str
                     <Typography variant="subtitle1" color="textSecondary" justifySelf={"flex-end"} sx={{ marginX: 1}}>
                         {new Date(blog.data.created).toLocaleDateString()}
                     </Typography>
-                    {blog.data.authors.map((author, index) => (
+                    {blog.data.authors.map((author) => (
                         <Chip key={author.name} label={author.name} size="small" color="primary" />
                     ))}
                 </Box>
                 <Box display="flex" flexWrap="wrap" justifyContent="flex-end" marginY={1}>
-                    {blog.data.tags.map((tag, index) => (
+                    {blog.data.tags.map((tag) => (
                         <Chip key={tag.name} label={tag.name} size="small" sx={{ marginRight: 1, marginBottom: 1 }} />
                     ))}
                 </Box>

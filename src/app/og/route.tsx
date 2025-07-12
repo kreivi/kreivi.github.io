@@ -1,6 +1,7 @@
 import { ImageResponse } from 'next/og'
+import { NextRequest } from 'next/server';
 
-export default function GET(request: Request) {
+export async function GET(request: NextRequest) {
     let title = 'Development Blog';
     if (request.url) {
         const url = new URL(request.url);
@@ -35,3 +36,6 @@ export default function GET(request: Request) {
         }
     )
 }
+
+// Set the size configuration
+export const runtime = 'edge';

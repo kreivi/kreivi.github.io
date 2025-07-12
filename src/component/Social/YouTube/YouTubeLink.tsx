@@ -1,5 +1,5 @@
 import { YouTube } from "@mui/icons-material";
-import { IconButton, Link, SvgIcon, Tooltip } from "@mui/material";
+import { IconButton, Link, Tooltip } from "@mui/material";
 
 export default function YouTubeLink() {
     return (

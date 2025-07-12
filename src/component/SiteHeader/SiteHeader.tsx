@@ -1,4 +1,4 @@
-import { AppBar, Box, Container, Link, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Link, Toolbar, Typography } from "@mui/material";
 import ColorSchemeToggle from "../ColorSchemeToggle";
 import { HomeFilled } from "@mui/icons-material";
 
