@@ -2,90 +2,66 @@ backend:
   name: github
   branch: main
   repo: kreivi/kreivi.github.io
+  site_url: https://kreivi.github.io
+  publish_mode: editorial_workflow
+  commit_messages:
+    create: "Create {{collection}} \"{{slug}}\""
+    update: "Update {{collection}} \"{{slug}}\""
+    delete: "Delete {{collection}} \"{{slug}}\""
+    uploadMedia: "Upload media file \"{{path}}\""
+    deleteMedia: "Delete media file \"{{path}}\""
 
-media_folder: static/assets/images
-public_folder: assets/images
-publish_mode: editorial_workflow
-
+media_folder: "public/media"
+public_folder: "media"
 collections:
+  - name: author
+    label: Author
+    folder: content/meta/author
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Name, name: name, widget: string, description: The name of the author. }
+      - { label: First Name, name: firstName, widget: string, description: The first name of the author., required: false}
+      - { label: Last Name, name: lastName, widget: string, description: The last name of the author., required: false }
+      - { label: Bio, name: bio, widget: text, description: A short biography of the author., required: false }
+      - { label: Image, name: image, widget: image, description: An image of the author., required: false }
+  - name: tag
+    label: Tag
+    folder: content/meta/tag
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Name, name: name, widget: string, description: The name of the tag. }
   - name: blog
     label: Blog
     folder: content/blog
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: Title, name: title, widget: string, description: The title of the blog post. }
       - {
-          label: "Title",
-          name: "title",
-          widget: "string",
-          description: "Titular name of the blog",
+          label: Authors,
+          name: authors,
+          description: List of authors for the blog post.,
+          widget: relation,
+          collection: author,
+          search_fields: [name],
+          value_field: name,
+          display_fields: [name],
+          multiple: true,
         }
+      - { label: Created, name: created, widget: datetime, description: Creation date of the blog post., default: "{{now}}" }
+      - { label: Modified, name: modified, widget: datetime, description: Last modified date of the blog post., required: false }
+      - { label: Overview, name: overview, widget: text, description: A brief overview of the blog post. }
       - {
-          label: "Short description",
-          name: "shortDescription",
-          widget: "string",
-          description: "Short description of the blog entry",
+          label: Tags,
+          name: tags,
+          description: Tags associated with the blog post.,
+          widget: relation,
+          collection: tag,
+          search_fields: [name],
+          value_field: name,
+          display_fields: [name],
+          multiple: true,
         }
-      - {
-          label: "Creation date",
-          name: "creationDate",
-          widget: "datetime",
-          description: "When was the blog entry created",
-        }
-      - {
-          label: "Body",
-          name: "body",
-          widget: "markdown",
-          description: "Rich body text of the blog",
-        }
-  - name: game
-    label: Game
-    folder: content/game
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - {
-          label: "Title",
-          name: "title",
-          widget: "string",
-          description: "Titular name of the game",
-        }
-      - {
-          label: "Short Description",
-          name: "shortDescription",
-          widget: "string",
-          description: "Short description of game",
-        }
-      - {
-          label: "Creation date",
-          name: "creationDate",
-          widget: "datetime",
-          description: "When was the game (approximately) created",
-        }
-      - {
-          label: "Game page link",
-          name: "gameLink",
-          widget: "string",
-          description: "Hyperlink to the games page",
-          required: false,
-        }
-      - {
-          label: "Gameplay video link",
-          name: "gameplayVideoLink",
-          widget: "string",
-          description: "Hyperlink to gameplay video of the game",
-          required: false,
-        }
-      - {
-          label: "Source code link",
-          name: "sourceCodeLink",
-          widget: "string",
-          description: "Hyperlink to the source code of the game",
-          required: false,
-        }
-      - {
-          label: "Body",
-          name: "body",
-          widget: "markdown",
-          description: "Rich body text of the game",
-        }
+      - { label: Body, name: body, widget: markdown, description: Rich text content of the blog post. }
