@@ -1,0 +1,91 @@
+backend:
+  name: github
+  branch: main
+  repo: kreivi/kreivi.github.io
+
+media_folder: static/assets/images
+public_folder: assets/images
+publish_mode: editorial_workflow
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          description: "Titular name of the blog",
+        }
+      - {
+          label: "Short description",
+          name: "shortDescription",
+          widget: "string",
+          description: "Short description of the blog entry",
+        }
+      - {
+          label: "Creation date",
+          name: "creationDate",
+          widget: "datetime",
+          description: "When was the blog entry created",
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          description: "Rich body text of the blog",
+        }
+  - name: game
+    label: Game
+    folder: content/game
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {
+          label: "Title",
+          name: "title",
+          widget: "string",
+          description: "Titular name of the game",
+        }
+      - {
+          label: "Short Description",
+          name: "shortDescription",
+          widget: "string",
+          description: "Short description of game",
+        }
+      - {
+          label: "Creation date",
+          name: "creationDate",
+          widget: "datetime",
+          description: "When was the game (approximately) created",
+        }
+      - {
+          label: "Game page link",
+          name: "gameLink",
+          widget: "string",
+          description: "Hyperlink to the games page",
+          required: false,
+        }
+      - {
+          label: "Gameplay video link",
+          name: "gameplayVideoLink",
+          widget: "string",
+          description: "Hyperlink to gameplay video of the game",
+          required: false,
+        }
+      - {
+          label: "Source code link",
+          name: "sourceCodeLink",
+          widget: "string",
+          description: "Hyperlink to the source code of the game",
+          required: false,
+        }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          description: "Rich body text of the game",
+        }
