@@ -20,7 +20,7 @@ jobs:
           node-version: "18"
 
       - name: Cache dependencies
-        uses: actions/cache@v4
+        uses: actions/cache@v2
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -28,7 +28,8 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
-      - run: npm run lint
+      - run: npm run format
+      - run: npm run test
       - run: npm run build
 
       - name: Deploy
