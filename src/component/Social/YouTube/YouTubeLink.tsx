@@ -1,3 +1,4 @@
+'use client';
 import { YouTube } from "@mui/icons-material";
 import { IconButton, Link, Tooltip } from "@mui/material";
 

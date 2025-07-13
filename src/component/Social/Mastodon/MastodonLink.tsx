@@ -1,3 +1,4 @@
+'use client';
 import { Mastodon } from "mdi-material-ui";
 import { IconButton, Link, Tooltip } from "@mui/material";
 

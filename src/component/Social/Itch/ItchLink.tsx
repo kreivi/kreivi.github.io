@@ -1,3 +1,4 @@
+'use client';
 import { IconButton, Link, SvgIcon, Tooltip } from "@mui/material";
 
 export default function ItchLink() {
