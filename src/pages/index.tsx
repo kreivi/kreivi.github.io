@@ -22,12 +22,11 @@ export default IndexPage
 
 export const Head: HeadFC = () => (
   <>
-    <title>Personal site</title>
-    <meta name="description" content="Welcome to the home page of our blog" />
+    <title>Development blog</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    <meta name="description" content="Personal website built with Gatsby, Material UI & Decap CMS. Hosted on Github Pages." />
-    <meta property="og:title" content="Personal site" />
-    <meta property="og:description" content="Personal website built with Gatsby, Material UI & Decap CMS. Hosted on Github Pages." />
+    <meta name="description" content="Development blog built with Gatsby, Material UI & Decap CMS. Hosted on Github Pages." />
+    <meta property="og:title" content="Development blog" />
+    <meta property="og:description" content="Development blog built with Gatsby, Material UI & Decap CMS. Hosted on Github Pages." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://kreivi.github.io/`} />
     <meta property="twitter:card" content="summary_large_image" />

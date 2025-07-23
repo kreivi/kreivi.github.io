@@ -161,6 +161,7 @@ export const Head = ({ data }: { data: BlogPostTemplateProps['data'] }) => {
       <meta property="og:type" content="article" />
       <meta property="og:url" content={`https://kreivi.github.io/blog/${blog.slug}`} />
       <meta property="twitter:card" content="summary_large_image" />
+      {blog.image && <meta property="og:image" content={`https://kreivi.github.io/assets/images/${blog.image}`} />}
       <link rel="canonical" href={`https://kreivi.github.io/blog/${blog.slug}`} />
     </>
   );

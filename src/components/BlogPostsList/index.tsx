@@ -36,7 +36,6 @@ export default function BlogPostList() {
     }
   `);
 
-  console.log("BlogPostList nodes:", nodes);
     return (
         <List>
             {nodes.map((node: BlogPostEntry) => (
