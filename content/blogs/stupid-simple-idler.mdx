@@ -1,0 +1,36 @@
+---
+name: "Stupid Simple Idler"
+image: "assets/images/stupid-simple-idler.png"
+authors: ["kreivi"]
+created: 2025-07-22T20:16:00.000Z
+overview: "Post mortem of yet another unfinished project."
+tags: ["general"]
+---
+## Post mortem
+
+How did it come to this again? This was supposed to be a game that actually could and would be finished but alas it was not meant to be.
+
+It was purposefully designed to be a "stupid simple idler" game where all you have to do is watch as resource number goes up and spend the gathered resource to purhase "updates" that makes the number go up faster. And that's what it was when the realization hit that nobody wants to play this. Gameplay is just too damn simple for enjoyment.
+
+## What was it?
+
+[Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) was the main inspiration for the idler mechanisms and [Cultist Simulator](https://store.steampowered.com/app/718670/Cultist_Simulator/) was the main inspiration for theme. Game ended up being Lovecraftian themed idler game where player recruits followers that generate essence which can be spent to recruit more followers.
+
+
+## Analysis
+
+On the mechanisms side only the bare minimum of tiered followers with increasing prices was implemented; so no upgrades, prestiges etc. familiar to Cookie Clicker players. On the theme side there's not much more than the names and avatar images of the followers that hint anything sinister is going on so way off from the intricate lore of Cultist Simulator.
+
+Crossroads was hit and it was time to decide whether to keep developing by adding more mechanisms and try to deepen to lore to something more interesting or was it simply time to stop and move on.
+
+## Conclusion
+
+The main purpose of this project was to implemented semi-generic mechanism that would work as crafting system to something like [Factorio](https://factorio.com/) or [Conan Exiles](https://store.steampowered.com/app/440900/Conan_Exiles/) that would be extracted as [Godot](https://godotengine.org) addon for future use.
+
+That has been somewhat accomplished and so it makes sense to stop development and scrap the project rather than try to push it any further. The game is just too far from having ***"it"*** that would make players enjoy it and developing it no longer feels exciting.
+
+On the positive side the created crafting system seems pretty flexible, it consists of _recipes_ that require _quantitative_ input _ingredients_, takes some simulation time to process and results in another _quantitative_ output _ingredients_.
+
+System still needs some testing in more demanding setup but if all goes well it will be likely published for anyone to use.
+
+Oh and the follower avatar images are already published at [OpenGameArt](https://opengameart.org/)(under [CC0](https://creativecommons.org/public-domain/cc0/)).
